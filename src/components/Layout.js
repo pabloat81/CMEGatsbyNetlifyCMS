@@ -2,7 +2,19 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.sass'
+
+
+import './style.css'
+import 'bootstrap/dist/css/bootstrap.css';
+//falta google fonts
+
+import "../../static/assets/css/animate.css";
+import "../../static/assets/css/font-awesome.css";
+import "../../static/assets/css/ionicons.css";
+import "../../static/assets/css/font-etline.css";
+import "../../static/assets/css/autora-icons.css";
+import "../../static/assets/css/shortcodes.css";
+
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
@@ -11,9 +23,14 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <html lang="en" />
+        <html lang="es" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        
+        <meta charset="utf-8" />
+    
+        <meta name="author" content="ignosoftware.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
         <link
           rel="apple-touch-icon"

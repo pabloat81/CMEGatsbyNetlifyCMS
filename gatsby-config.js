@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'CME ARGENTINA / Ingeniería, diseño y fabricación',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Líderes en ingeniería, diseño y fabricación de productos y estructuras de material compuesto de fibra de vidrio',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
