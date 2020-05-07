@@ -10,15 +10,10 @@ import PorQueElegirnos from '../components/PorQueElegirnos';
 import AboutBox from '../components/AboutBox';
 import FeaturedProducts from '../components/FeaturedProducts';
 import FeaturedProjects from '../components/FeaturedProjects';
-import YoutubeBackground from 'react-youtube-background';
 
 export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => (
 	<Fragment>
-		<YoutubeBackground
-      videoId={'ccbpmoJ_yPo'} /* default -> null */
-      playerOptions={{autoplay: 1,controls: 0,rel: 0,showinfo: 0, origin:'http://localhost:8888', enablejsapi: 1}}>
-			{/* YOUR CONTENT */}
-		</YoutubeBackground>
+
 		<Ventajas />
 		<PorQueElegirnos />
 		<FeaturedProducts />
