@@ -1,15 +1,10 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import Ventajas from '../components/Ventajas'
-import PorQueElegirnos from '../components/PorQueElegirnos'
-import AboutBox from '../components/AboutBox'
-import FeaturedProducts from '../components/FeaturedProducts'
-import FeaturedProjects from '../components/FeaturedProjects'
 
 export const IndexPageTemplate = ({
   image,
@@ -20,13 +15,7 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <Fragment>
-    <Ventajas />
-    <PorQueElegirnos /> 
-    <FeaturedProducts />   
-    <AboutBox />
-    <FeaturedProjects />
-
+  <div>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -122,7 +111,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-  </Fragment>
+  </div>
 )
 
 IndexPageTemplate.propTypes = {
@@ -166,7 +155,7 @@ IndexPage.propTypes = {
 export default IndexPage
 
 export const pageQuery = graphql`
-  query IndexPageTemplateCME {
+  query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title

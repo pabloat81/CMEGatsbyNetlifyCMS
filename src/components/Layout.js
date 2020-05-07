@@ -61,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
 					<Footer />
 				</div>
 			</div>
-			<a href='/' id="scroll-top" />
+			<a id="scroll-top" />
 		</Fragment>
 	);
 };

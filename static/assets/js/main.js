@@ -33,17 +33,21 @@
             self.config.$document.on( 'ready', function() {
 
                 // PreLoader
-                self.preLoader();
+                //self.preLoader();
 
+                
                 // Retina Logos
-                self.retinaLogo();
+                //self.retinaLogo();
 
+                
                 // Header Fixed
-                self.headerFixed();
+                //self.headerFixed();
 
+                
                 // Mobile Navigation
                 self.mobileNav();
 
+                
                 // Scroll to Top
                 self.scrollToTop();
 
@@ -51,11 +55,12 @@
 
             // Run on Window Load
             self.config.$window.on( 'load', function() {
-
+                
             } );
         },
 
         // PreLoader
+        /*
         preLoader: function() {
             if ( $().animsition ) {
                 $('.animsition').animsition({
@@ -80,9 +85,10 @@
                     transition: function(url){ window.location.href = url; }
                 });
             }
-        },
+        },*/
 
         // Retina Logos
+        /*
         retinaLogo: function() {
             var retina = window.devicePixelRatio > 1 ? true : false;
             var $logo = $('#site-logo img');
@@ -96,12 +102,14 @@
                 });
             }
         },
+        */
 
         // Header Fixed
+        /*
         headerFixed: function() {
-            if ( $('body').hasClass('header-fixed') ) {
+            if ( $('#wrapper').hasClass('header-fixed') ) {
                 var nav = $('#site-header');
-
+                console.log(nav.length);
                 if ( $('body').is('.header-style-8') ) {
                     var nav = $('.site-navigation-wrap');
                 }
@@ -130,7 +138,7 @@
                     })
                 }
             }     
-        },
+        },*/
 
         // Mobile Navigation
         mobileNav: function() {
@@ -186,7 +194,11 @@
         },
 
         // Scroll to Top
-        scrollToTop: function() {
+        scrollToTop: function() {            
+            $(document).on('click', '#scroll-top', function() {
+                $('html, body').animate({ scrollTop: 0 }, 1000 , 'easeInOutExpo');                
+            });
+            
             $(window).scroll(function() {
                 if ( $(this).scrollTop() > 300 ) {
                     $('#scroll-top').addClass('show');
@@ -194,15 +206,10 @@
                     $('#scroll-top').removeClass('show');
                 }
             });
-
-            $('#scroll-top').on('click', function() {
-                $('html, body').animate({ scrollTop: 0 }, 1000 , 'easeInOutExpo');
-            return false;
-            });
         },
 
     }; // end themesflatTheme
-
+    
     // Start things up
     themesflatTheme.init();
 
@@ -332,6 +339,7 @@
     //     }
     // };
 
+    /*
     var alertBox = function() {
         $(document).on('click', '.close', function(e) {
             $(this).closest('.flat-alert').remove();
@@ -345,5 +353,5 @@
         //ajaxContactForm();
         alertBox();
     });
-
+*/
 })(jQuery);
