@@ -4,53 +4,53 @@ import React from 'react';
 const FeaturedProjects = class extends React.Component {
 	render() {
 		return (
-			<div class="row-project parallax parallax-1 parallax-overlay">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12">
+			<div className="row-project parallax parallax-1 parallax-overlay">
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-12">
 							<div
-								class="themesflat-spacer clearfix"
+								className="themesflat-spacer clearfix"
 								data-desktop="60"
 								data-mobile="60"
 								data-smobile="60"
 							/>
-							<div class="themesflat-headings style-1 text-center clearfix">
-								<h2 class="heading text-white">FEATURED PROJECT</h2>
-								<div class="sep has-icon width-125 border-color-light clearfix">
-									<div class="sep-icon">
-										<span class="sep-icon-before sep-center sep-solid" />
-										<span class="icon-wrap">
-											<i class="autora-icon-build" />
+							<div className="themesflat-headings style-1 text-center clearfix">
+								<h2 className="heading text-white">FEATURED PROJECT</h2>
+								<div className="sep has-icon width-125 border-color-light clearfix">
+									<div className="sep-icon">
+										<span className="sep-icon-before sep-center sep-solid" />
+										<span className="icon-wrap">
+											<i className="autora-icon-build" />
 										</span>
-										<span class="sep-icon-after sep-center sep-solid" />
+										<span className="sep-icon-after sep-center sep-solid" />
 									</div>
 								</div>
 							</div>
 							<div
-								class="themesflat-spacer clearfix"
+								className="themesflat-spacer clearfix"
 								data-desktop="30"
 								data-mobile="35"
 								data-smobile="35"
 							/>
 							<div
-								class="themesflat-carousel-box clearfix"
+								className="themesflat-carousel-box clearfix"
 								data-gap="30"
 								data-column="4"
 								data-column2="2"
 								data-column3="1"
 								data-auto="false"
 							>
-								<div class="owl-carousel owl-theme">
-									<div class="themesflat-project style-1 data-effect  clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+								<div className="owl-carousel owl-theme">
+									<div className="themesflat-project style-1 data-effect  clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-1-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -59,25 +59,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-2-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -86,25 +86,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-3-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -113,25 +113,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect  clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect  clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-4-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -140,25 +140,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect  clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect  clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-1-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -167,25 +167,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect  clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect  clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-2-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -194,25 +194,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect  clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect  clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-3-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -221,25 +221,25 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="themesflat-project style-1 data-effect clearfix">
-										<div class="project-item">
-											<div class="inner">
-												<div class="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+									<div className="themesflat-project style-1 data-effect clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
 													<img src="assets/img/project/project-4-440x280.jpg" alt="Image" />
-													<div class="text-wrap text-center">
-														<h5 class="heading">
+													<div className="text-wrap text-center">
+														<h5 className="heading">
 															<a href="#">LAKE MEADOWS APARTMENTS</a>
 														</h5>
-														<div class="elm-meta">
+														<div className="elm-meta">
 															<span>
 																<a href="#">Architecture</a>
 															</span>
@@ -248,11 +248,11 @@ const FeaturedProjects = class extends React.Component {
 															</span>
 														</div>
 													</div>
-													<div class="elm-link">
-														<a href="#" class="icon-1 icon-search" />
-														<a href="#" class="icon-1" />
+													<div className="elm-link">
+														<a href="#" className="icon-1 icon-search" />
+														<a href="#" className="icon-1" />
 													</div>
-													<div class="overlay-effect bg-color-3" />
+													<div className="overlay-effect bg-color-3" />
 												</div>
 											</div>
 										</div>
@@ -260,18 +260,18 @@ const FeaturedProjects = class extends React.Component {
 								</div>
 							</div>
 							<div
-								class="themesflat-spacer clearfix"
+								className="themesflat-spacer clearfix"
 								data-desktop="41"
 								data-mobile="35"
 								data-smobile="35"
 							/>
-							<div class="elm-button text-center">
-								<a href="#" class="themesflat-button bg-accent">
+							<div className="elm-button text-center">
+								<a href="#" className="themesflat-button bg-accent">
 									ALL PROJECTS{' '}
 								</a>
 							</div>
 							<div
-								class="themesflat-spacer clearfix"
+								className="themesflat-spacer clearfix"
 								data-desktop="73"
 								data-mobile="60"
 								data-smobile="60"
@@ -279,7 +279,7 @@ const FeaturedProjects = class extends React.Component {
 						</div>
 					</div>
 				</div>
-				<div class="bg-parallax-overlay overlay-black" />
+				<div className="bg-parallax-overlay overlay-black" />
 			</div>
 		);
 	}
