@@ -182,6 +182,51 @@ collections:
                     widget: string
                     hint: ""
                     default: trash
+          - label: PorQueElegirnos
+            name: PorQueElegirnos
+            required: true
+            widget: object
+            hint: ""
+            fields:
+              - label: Titulo
+                name: titulo
+                required: true
+                widget: string
+                hint: ""
+                default: POR QUE ELEGIRNOS?
+              - label: Subtitulo
+                name: subtitulo
+                required: true
+                widget: text
+                hint: ""
+                default: Are you interested in finding out how we can make your project
+                  a success? Please constact us.
+              - label: Iconos
+                name: iconos
+                required: true
+                widget: list
+                hint: ""
+                default: ""
+                allow_add: true
+                fields:
+                  - label: Titulo
+                    name: titulo
+                    required: true
+                    widget: string
+                    hint: ""
+                    default: ""
+                  - label: SubTitulo
+                    name: subTitulo
+                    required: true
+                    widget: string
+                    hint: ""
+                    default: ""
+                  - label: Icono
+                    name: icono
+                    required: true
+                    widget: string
+                    hint: ""
+                    default: -trash
       - file: src/pages/about/index.md
         label: About
         name: about
