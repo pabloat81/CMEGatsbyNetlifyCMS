@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import { Link } from 'gatsby';
+import FooterTags from './FooterTags'
 
 import logo from '../../static/assets/img/logo.png';
 /*import facebook from '../img/social/facebook.svg';
@@ -11,11 +12,13 @@ import vimeo from '../img/social/vimeo.svg';
 */
 
 const Footer = () => {
+
 	const data = useStaticQuery(graphql`
-		query HeaderQuery {
+		query FooterQuery {
 			allMarkdownRemark(
 				sort: { order: DESC, fields: [frontmatter___date] }
 				filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+				limit: 2
 			) {
 				edges {
 					node {
@@ -126,7 +129,7 @@ const Footer = () => {
 														<Link to={post.fields.slug}>{post.frontmatter.title}</Link>
 													</h3>
 													<span className="post-date">
-													<span className="entry-date">{post.frontmatter.date}</span>
+														<span className="entry-date">{post.frontmatter.date}</span>
 													</span>
 												</div>
 											</li>
@@ -135,30 +138,7 @@ const Footer = () => {
 							</div>
 						</div>
 
-						<div className="col span_1_of_3">
-							<div
-								className="themesflat-spacer clearfix"
-								data-desktop="0"
-								data-mobile="35"
-								data-smobile="35"
-							/>
-
-							<div className="widget widget_tags">
-								<h2 className="widget-title margin-bottom-30">
-									<span>TAGS</span>
-								</h2>
-								<div className="tags-list">
-									<a href="#">Building</a>
-									<a href="#">Smart House</a>
-									<a href="#">Costruction</a>
-									<a href="#">Villa</a>
-									<a href="#">Residential</a>
-									<a href="#">Interior</a>
-									<a href="#">Resort</a>
-									<a href="#">Commercial</a>
-								</div>
-							</div>
-						</div>
+						<FooterTags/>
 
 						<div className="col span_1_of_3">
 							<div
