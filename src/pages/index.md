@@ -11,11 +11,10 @@ mainpitch:
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+description: Kaldi is the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -67,4 +66,20 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+ventajas:
+  titulo: VENTAJAS
+  subtitulo: |-
+    Are you interested in finding out how we can make your project
+    a success? Please constact us.
+  iconosVentajas:
+    - tituloVentaja: DESIGN-BUILD
+      subTituloVentaja: We develop and understand project expectations and then manage
+        those needs with a design team. Innovation should happen throughout a
+        project.
+      Icono: -trash
+    - tituloVentaja: CONSTRUCTION MANAGEMENT
+      subTituloVentaja: We work closely with architects and designers to understand
+        the project, and ultimately develop a targeted solution that optimizes
+        every stage of the build.
+      Icono: -check-square
 ---
