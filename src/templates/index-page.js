@@ -11,11 +11,13 @@ import AboutBox from '../components/AboutBox';
 import FeaturedProducts from '../components/FeaturedProducts';
 import FeaturedProjects from '../components/FeaturedProjects';
 
+//import Video from '../components/video';
 
-export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => (  
-
-  <Fragment>
-
+export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => (
+	<Fragment>
+		{/*<Video 
+			videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+		videoTitle="Official Music Video on YouTube" />*/}
 		<Ventajas />
 		<PorQueElegirnos />
 		<FeaturedProducts />
@@ -127,22 +129,22 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
 	const { frontmatter } = data.markdownRemark;
 
-  const _onEnd = (event) => {
-    event.target.playVideo();
-  }
+	const _onEnd = (event) => {
+		event.target.playVideo();
+	};
 
-  const videoOptions = {
-    playerVars: { // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      controls: 0,
-      rel: 0,
-      showinfo: 0
-    }
-  };
+	const videoOptions = {
+		playerVars: {
+			// https://developers.google.com/youtube/player_parameters
+			autoplay: 1,
+			controls: 0,
+			rel: 0,
+			showinfo: 0
+		}
+	};
 
 	return (
 		<Layout>
-
 			<IndexPageTemplate
 				image={frontmatter.image}
 				title={frontmatter.title}
