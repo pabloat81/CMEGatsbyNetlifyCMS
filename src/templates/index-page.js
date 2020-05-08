@@ -13,17 +13,17 @@ import FeaturedProjects from '../components/FeaturedProjects';
 
 //import Video from '../components/video';
 
-export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => (
+export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro, ventajas }) => (
 	<Fragment>
 		{/*<Video 
 			videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ" 
 		videoTitle="Official Music Video on YouTube" />*/}
-		<Ventajas />
+		<Ventajas ventajas={ventajas}/>
 		<PorQueElegirnos />
 		<FeaturedProducts />
 		<AboutBox />
 		<FeaturedProjects />
-
+	<h1>{ventajas.titulo}</h1>
 		<div
 			className="full-width-image margin-top-0"
 			style={{
@@ -123,25 +123,14 @@ IndexPageTemplate.propTypes = {
 	description: PropTypes.string,
 	intro: PropTypes.shape({
 		blurbs: PropTypes.array
+	}),
+	ventajas: PropTypes.shape({
+		iconosVentajas: PropTypes.array
 	})
 };
 
 const IndexPage = ({ data }) => {
 	const { frontmatter } = data.markdownRemark;
-
-	const _onEnd = (event) => {
-		event.target.playVideo();
-	};
-
-	const videoOptions = {
-		playerVars: {
-			// https://developers.google.com/youtube/player_parameters
-			autoplay: 1,
-			controls: 0,
-			rel: 0,
-			showinfo: 0
-		}
-	};
 
 	return (
 		<Layout>
@@ -153,6 +142,7 @@ const IndexPage = ({ data }) => {
 				mainpitch={frontmatter.mainpitch}
 				description={frontmatter.description}
 				intro={frontmatter.intro}
+				ventajas={frontmatter.ventajas}
 			/>
 		</Layout>
 	);
@@ -200,6 +190,16 @@ export const pageQuery = graphql`
 					}
 					heading
 					description
+				}
+				ventajas{
+					iconosVentajas
+					{
+					  Icono
+					  tituloVentaja
+					  subTituloVentaja
+					}
+					titulo
+					subtitulo	
 				}
 			}
 		}
