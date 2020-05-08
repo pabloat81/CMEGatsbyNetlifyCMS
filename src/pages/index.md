@@ -50,7 +50,7 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-main:
+productosDestacados:
   heading: Great coffee with no compromises
   description: >
     We hold our coffee to the highest standards from the shrub to the cup.
@@ -60,12 +60,15 @@ main:
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products-grid3.jpg
+    url: /producto/rejillas
   image2:
     alt: A green cup of a coffee on a wooden table
     image: /img/products-grid2.jpg
+    url: /producto/rejillas
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+    url: /producto/rejillas
 ventajas:
   titulo: VENTAJAS
   subtitulo: |-

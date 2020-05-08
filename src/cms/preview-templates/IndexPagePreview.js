@@ -16,6 +16,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
         ventajas={data.ventajas || { iconosVentajas: [] }}
+        porQueElegirnos={data.PorQueElegirnos || { iconos: [] }}
       />
     )
   } else {

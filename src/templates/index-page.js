@@ -13,13 +13,13 @@ import FeaturedProjects from '../components/FeaturedProjects';
 
 //import Video from '../components/video';
 
-export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro, ventajas }) => (
+export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro, ventajas, porQueElegirnos }) => (
 	<Fragment>
 		{/*<Video 
 			videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ" 
 		videoTitle="Official Music Video on YouTube" />*/}
 		<Ventajas ventajas={ventajas}/>
-		<PorQueElegirnos />
+		<PorQueElegirnos porQueElegirnos={porQueElegirnos}/>
 		<FeaturedProducts />
 		<AboutBox />
 		<FeaturedProjects />
@@ -126,6 +126,9 @@ IndexPageTemplate.propTypes = {
 	}),
 	ventajas: PropTypes.shape({
 		iconosVentajas: PropTypes.array
+	}),
+	porQueElegirnos: PropTypes.shape({
+		iconos: PropTypes.array
 	})
 };
 
@@ -143,6 +146,7 @@ const IndexPage = ({ data }) => {
 				description={frontmatter.description}
 				intro={frontmatter.intro}
 				ventajas={frontmatter.ventajas}
+				porQueElegirnos={frontmatter.PorQueElegirnos}
 			/>
 		</Layout>
 	);
@@ -197,6 +201,16 @@ export const pageQuery = graphql`
 					  Icono
 					  tituloVentaja
 					  subTituloVentaja
+					}
+					titulo
+					subtitulo	
+				}
+				PorQueElegirnos{
+					iconos
+					{
+					  icono
+					  titulo
+					  subTitulo
 					}
 					titulo
 					subtitulo	
