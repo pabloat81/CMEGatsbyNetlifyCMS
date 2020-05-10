@@ -12,7 +12,7 @@ import '../../static/assets/css/font-etline.css';
 import '../../static/assets/css/autora-icons.css';
 import '../../static/assets/css/shortcodes.css';
 import './style.css';
-import $ from 'jquery';
+//import $ from 'jquery';
 
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
