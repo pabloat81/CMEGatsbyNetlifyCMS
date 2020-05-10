@@ -95,16 +95,16 @@ export const flatOwl = function() {
 };
 
 export const flatGallery = function() {
-	if ($().owlCarousel) {
+	if ($('.owlCarousel')) {
 		$('.themesflat-gallery').each(function() {
-			var $this = $(this),
-				auto = $this.data('auto'),
-				item = $this.data('column'),
-				item2 = $this.data('column2'),
-				item3 = $this.data('column3'),
-				gap = Number($this.data('gap'));
+			var sthis = $(this),
+				auto = sthis.data('auto'),
+				item = sthis.data('column'),
+				item2 = sthis.data('column2'),
+				item3 = sthis.data('column3'),
+				gap = Number(sthis.data('gap'));
 
-			$this.find('.owl-carousel').owlCarousel({
+			sthis.find('.owl-carousel').owlCarousel({
 				margin: gap,
 				nav: true,
 				thumb: true,
@@ -128,7 +128,7 @@ export const flatGallery = function() {
 		});
 	}
 };
-/*
+
 export const inViewport = function() {
 	$('[data-inviewport="yes"]').waypoint(
 		function() {
@@ -165,7 +165,7 @@ export const flatEqualizeHeight = function() {
 		});
 	}, 500);
 };
-*/
+
 
 export const flatContentBox = function() {
 	var mode = 'desktop';
