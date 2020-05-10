@@ -15,7 +15,8 @@
   * swClick
   * Parallax
 */
-import $ from 'jquery';
+
+let $ = window.jQuery
 
 export const isMobile = {
 	Android: function() {
@@ -62,7 +63,7 @@ export const Parallax = function() {
 };
 
 export const flatOwl = function() {
-	if ($().owlCarousel) {
+	if ($('.owlCarousel')) {
 		$('.themesflat-carousel-box').each(function() {
 			var $this = $(this),
 				auto = $this.data('auto'),
@@ -165,7 +166,6 @@ export const flatEqualizeHeight = function() {
 		});
 	}, 500);
 };
-
 
 export const flatContentBox = function() {
 	var mode = 'desktop';

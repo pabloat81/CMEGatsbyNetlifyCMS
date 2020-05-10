@@ -85,15 +85,3 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
-
-
-exports.onCreateWebpackConfig = ({
-  actions,
-}) => {
-  const { setWebpackConfig } = actions;
-  setWebpackConfig({
-    externals: {
-      jquery: 'jquery', // important: 'Q' capitalized
-    }
-  })
-}
