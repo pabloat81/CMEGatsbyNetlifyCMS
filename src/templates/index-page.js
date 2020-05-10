@@ -13,16 +13,16 @@ import FeaturedProjects from '../components/FeaturedProjects';
 
 //import Video from '../components/video';
 
-export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro, ventajas, porQueElegirnos }) => (
+export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro, ventajas, porQueElegirnos, productosDestacados, obrasDestacadas }) => (
 	<Fragment>
 		{/*<Video 
 			videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ" 
 		videoTitle="Official Music Video on YouTube" />*/}
 		<Ventajas ventajas={ventajas}/>
 		<PorQueElegirnos porQueElegirnos={porQueElegirnos}/>
-		<FeaturedProducts />
+		<FeaturedProducts productosDestacados={productosDestacados} />
 		<AboutBox />
-		<FeaturedProjects />
+		<FeaturedProjects projects={obrasDestacadas} />
 	<h1>{ventajas.titulo}</h1>
 		<div
 			className="full-width-image margin-top-0"
@@ -129,7 +129,11 @@ IndexPageTemplate.propTypes = {
 	}),
 	porQueElegirnos: PropTypes.shape({
 		iconos: PropTypes.array
-	})
+	}),
+	productosDestacados: PropTypes.object,
+	obrasDestacadas: PropTypes.shape({
+		blurbs: PropTypes.array
+	}),
 };
 
 const IndexPage = ({ data }) => {
@@ -144,9 +148,11 @@ const IndexPage = ({ data }) => {
 				subheading={frontmatter.subheading}
 				mainpitch={frontmatter.mainpitch}
 				description={frontmatter.description}
-				intro={frontmatter.intro}
+				intro={frontmatter.obrasDestacadas}
 				ventajas={frontmatter.ventajas}
 				porQueElegirnos={frontmatter.PorQueElegirnos}
+				productosDestacados={frontmatter.productosDestacados}
+				obrasDestacadas={frontmatter.obrasDestacadas}
 			/>
 		</Layout>
 	);
@@ -181,7 +187,7 @@ export const pageQuery = graphql`
 					description
 				}
 				description
-				intro {
+				obrasDestacadas {
 					blurbs {
 						image {
 							childImageSharp {
@@ -191,9 +197,25 @@ export const pageQuery = graphql`
 							}
 						}
 						text
+						url
 					}
 					heading
 					description
+				}
+				productosDestacados {
+					heading
+					description
+					blurbs {
+						image {
+							childImageSharp {
+								fluid(maxWidth: 350, quality: 64) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+						text
+						url
+					}
 				}
 				ventajas{
 					iconosVentajas
