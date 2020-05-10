@@ -4,11 +4,10 @@ import { Link } from 'gatsby';
 
 const FeaturedProducts = ({ productosDestacados }) => {
 	const elipsis = (str) => {
-		let cantCaracteres = 22
+		let cantCaracteres = 22;
 		if (str && str.length > 0) {
 			str = str.toUpperCase();
-			if (str.length > cantCaracteres) 
-				return str.substring(0, cantCaracteres) + '...';
+			if (str.length > cantCaracteres) return str.substring(0, cantCaracteres) + '...';
 			return str;
 		}
 		return 'PRODUCTO';
@@ -52,129 +51,27 @@ const FeaturedProducts = ({ productosDestacados }) => {
 							data-column3="1"
 							data-auto="false"
 						>
-							
 							<div className="owl-carousel owl-theme">
-							{productosDestacados.blurbs.map(({blurb})=> (
-								<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
-									<div className="image-box-item">
-										<div className="inner">
-											<div className="thumb data-effect-item">
-												<PreviewCompatibleImage
-													imageInfo={{
-														image: blurb.image,
-														alt: `Imagen del producto ${blurb.alt}`
-													}}
-												/>
-												<div className="overlay-effect bg-color-accent" />
-											</div>
-											<div className="text-wrap">
-												<h5 className="heading">
-													<Link to={blurb.url}>
-														{elipsis( blurb.alt)}
-													</Link>
-												</h5>
-												<span className="icon-wrap">
-													<i className="fa fa-angle-right" />
-												</span>
+								{productosDestacados.blurbs.map((blurb) => (
+									<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
+										<div className="image-box-item">
+											<div className="inner">
+												<div className="thumb data-effect-item">
+													<PreviewCompatibleImage imageInfo={blurb} />
+													<div className="overlay-effect bg-color-accent" />
+												</div>
+												<div className="text-wrap">
+													<h5 className="heading">
+														<Link to={blurb.url}>{elipsis(blurb.text)}</Link>
+													</h5>
+													<span className="icon-wrap">
+														<i className="fa fa-angle-right" />
+													</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							))}
-								<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
-									<div className="image-box-item">
-										<div className="inner">
-											<div className="thumb data-effect-item">
-												<img src="assets/img/imagebox/image-box-2-370x250.jpg" alt="Image" />
-												<div className="overlay-effect bg-color-accent" />
-											</div>
-											<div className="text-wrap">
-												<h5 className="heading">
-													<a href="#">BUILDING ENVELOPES</a>
-												</h5>
-												<span className="icon-wrap">
-													<i className="fa fa-angle-right" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
-									<div className="image-box-item">
-										<div className="inner">
-											<div className="thumb data-effect-item">
-												<img src="assets/img/imagebox/image-box-3-370x250.jpg" alt="Image" />
-												<div className="overlay-effect bg-color-accent" />
-											</div>
-											<div className="text-wrap">
-												<h5 className="heading">
-													<a href="#">CONSTRUCTION</a>
-												</h5>
-												<span className="icon-wrap">
-													<i className="fa fa-angle-right" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
-									<div className="image-box-item">
-										<div className="inner">
-											<div className="thumb data-effect-item">
-												<img src="assets/img/imagebox/image-box-1-370x250.jpg" alt="Image" />
-												<div className="overlay-effect bg-color-accent" />
-											</div>
-											<div className="text-wrap">
-												<h5 className="heading">
-													<a href="#">DESIGN & BUILD</a>
-												</h5>
-												<span className="icon-wrap">
-													<i className="fa fa-angle-right" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
-									<div className="image-box-item">
-										<div className="inner">
-											<div className="thumb data-effect-item">
-												<img src="assets/img/imagebox/image-box-2-370x250.jpg" alt="Image" />
-												<div className="overlay-effect bg-color-accent" />
-											</div>
-											<div className="text-wrap">
-												<h5 className="heading">
-													<a href="#">BUILDING ENVELOPES</a>
-												</h5>
-												<span className="icon-wrap">
-													<i className="fa fa-angle-right" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
-									<div className="image-box-item">
-										<div className="inner">
-											<div className="thumb data-effect-item">
-												<img src="assets/img/imagebox/image-box-3-370x250.jpg" alt="Image" />
-												<div className="overlay-effect bg-color-accent" />
-											</div>
-											<div className="text-wrap">
-												<h5 className="heading">
-													<a href="#">CONSTRUCTION MANAGEMENT</a>
-												</h5>
-												<span className="icon-wrap">
-													<i className="fa fa-angle-right" />
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
+								))}
 							</div>
 						</div>
 						<div
@@ -184,9 +81,9 @@ const FeaturedProducts = ({ productosDestacados }) => {
 							data-smobile="35"
 						/>
 						<div className="elm-button text-center">
-							<a href="#" className="themesflat-button bg-accent">
-								ALL SERVICES
-							</a>
+							<Link to="/productos" className="themesflat-button bg-accent">
+								TODOS LOS PRODUCTOS
+							</Link>
 						</div>
 						<div
 							className="themesflat-spacer clearfix"
