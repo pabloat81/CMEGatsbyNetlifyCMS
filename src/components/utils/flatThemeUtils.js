@@ -128,7 +128,7 @@ export const flatGallery = function() {
 		});
 	}
 };
-
+/*
 export const inViewport = function() {
 	$('[data-inviewport="yes"]').waypoint(
 		function() {
@@ -143,6 +143,7 @@ export const inViewport = function() {
 		}, 100);
 	});
 };
+
 
 export const flatEqualizeHeight = function() {
 	setTimeout(function() {
@@ -164,6 +165,7 @@ export const flatEqualizeHeight = function() {
 		});
 	}, 500);
 };
+*/
 
 export const flatContentBox = function() {
 	var mode = 'desktop';

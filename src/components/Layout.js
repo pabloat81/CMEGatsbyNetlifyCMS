@@ -20,7 +20,7 @@ import { withPrefix } from 'gatsby';
 import {
 	flatSpacer,
 	flatContentBox,
-	flatEqualizeHeight,
+	//flatEqualizeHeight,
 	flatGallery,
 	searchIcon,
 	flatTabs,
@@ -32,7 +32,7 @@ import {
 	swClick,
 	flatOwl,
 	Parallax,
-	inViewport
+	//inViewport
 } from './utils/flatThemeUtils';
 
 const TemplateWrapper = ({ children }) => {
@@ -42,7 +42,7 @@ const TemplateWrapper = ({ children }) => {
 		//jQuery('.owl-carousel').owlCarousel({margin: 30})
 		flatSpacer();
 		flatContentBox();
-		flatEqualizeHeight();
+		//flatEqualizeHeight();
 		flatGallery();
 		searchIcon();
 		flatTabs();
@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
 		swClick();
 		flatOwl();
 		Parallax();
-		inViewport();
+		//inViewport();
 
 		console.log('pase')
 	}, []);
