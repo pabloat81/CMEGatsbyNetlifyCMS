@@ -16,7 +16,8 @@
   * Parallax
 */
 
-let $ = window.jQuery
+const windowGlobal = typeof window !== 'undefined' && window;
+let $ = windowGlobal.jQuery
 
 export const isMobile = {
 	Android: function() {
