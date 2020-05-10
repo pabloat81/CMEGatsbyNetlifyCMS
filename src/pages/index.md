@@ -84,12 +84,12 @@ ventajas:
       subTituloVentaja: We develop and understand project expectations and then manage
         those needs with a design team. Innovation should happen throughout a
         project.
-      Icono: -trash
+      Icono: fa-trash
     - tituloVentaja: CONSTRUCTION MANAGEMENT
       subTituloVentaja: We work closely with architects and designers to understand
         the project, and ultimately develop a targeted solution that optimizes
         every stage of the build.
-      Icono: -check-square
+      Icono: fa-check-square
 PorQueElegirnos:
   titulo: POR QUE ELEGIRNOS?
   subtitulo: More than 500 projects completed in CME - With over 25 years of
@@ -98,13 +98,13 @@ PorQueElegirnos:
     - titulo: CALIDAD
       subTitulo: Autora Construction Services are committed to meeting the highest
         quality standards without compromising our safety culture..
-      icono: -trash
+      icono: fa-trash
     - titulo: ENTREGAMOS EN TIEMPO
       subTitulo: At our company, we respect the customer’s time and schedule and
         always complete the projects on timely fashion way.
-      icono: -trash
+      icono: fa-trash
     - titulo: EXPERIENCIA
       subTitulo: At our company, we respect the customer’s time and schedule and
         always complete the projects on timely fashion way.
-      icono: -trash
+      icono: fa-trash
 ---

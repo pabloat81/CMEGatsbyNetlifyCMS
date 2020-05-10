@@ -1,5 +1,7 @@
 import React from 'react';
-//import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
+import {elipsis} from './utils'
 
 const FeaturedProjects = ({ projects }) => {
 	return (
@@ -14,7 +16,7 @@ const FeaturedProjects = ({ projects }) => {
 							data-smobile="60"
 						/>
 						<div className="themesflat-headings style-1 text-center clearfix">
-							<h2 className="heading text-white">FEATURED PROJECT</h2>
+							<h2 className="heading text-white">{projects.heading.toUpperCase()}</h2>
 							<div className="sep has-icon width-125 border-color-light clearfix">
 								<div className="sep-icon">
 									<span className="sep-icon-before sep-center sep-solid" />
@@ -40,222 +42,35 @@ const FeaturedProjects = ({ projects }) => {
 							data-auto="false"
 						>
 							<div className="owl-carousel owl-theme">
-								<div className="themesflat-project style-1 data-effect  clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-1-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
+								{projects.blurbs.map((blurb) => (
+									<div key={blurb.text} className="themesflat-project style-1 data-effect  clearfix">
+										<div className="project-item">
+											<div className="inner">
+												<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
+													<PreviewCompatibleImage imageInfo={blurb} />
+													<div className="text-wrap text-center">
+														<h5 className="heading">
+															<Link to={blurb.url}>{elipsis(blurb.text, 40)}</Link>
+														</h5>
+														<div className="elm-meta">
+															<span>
+																<Link to="/obras">Obras</Link>
+															</span>
+															<span>
+																<Link to="/obras">Ingeniería</Link>
+															</span>
+														</div>
 													</div>
+													<div className="elm-link">
+														{/*<a href="#" className="icon-1 icon-search" />*/}
+														<Link to={blurb.url} className="icon-1" />
+													</div>
+													<div className="overlay-effect bg-color-3" />
 												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
 											</div>
 										</div>
 									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-2-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-3-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect  clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-4-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect  clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-1-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect  clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-2-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect  clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-3-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="themesflat-project style-1 data-effect clearfix">
-									<div className="project-item">
-										<div className="inner">
-											<div className="thumb data-effect-item has-effect-icon w40 offset-v-43 offset-h-46">
-												<img src="assets/img/project/project-4-440x280.jpg" alt="Image" />
-												<div className="text-wrap text-center">
-													<h5 className="heading">
-														<a href="#">LAKE MEADOWS APARTMENTS</a>
-													</h5>
-													<div className="elm-meta">
-														<span>
-															<a href="#">Architecture</a>
-														</span>
-														<span>
-															<a href="#">Building</a>
-														</span>
-													</div>
-												</div>
-												<div className="elm-link">
-													<a href="#" className="icon-1 icon-search" />
-													<a href="#" className="icon-1" />
-												</div>
-												<div className="overlay-effect bg-color-3" />
-											</div>
-										</div>
-									</div>
-								</div>
+								))}
 							</div>
 						</div>
 						<div
@@ -265,9 +80,9 @@ const FeaturedProjects = ({ projects }) => {
 							data-smobile="35"
 						/>
 						<div className="elm-button text-center">
-							<a href="#" className="themesflat-button bg-accent">
-								ALL PROJECTS{' '}
-							</a>
+							<Link to="/obras" className="themesflat-button bg-accent">
+								VER OBRAS
+							</Link>
 						</div>
 						<div
 							className="themesflat-spacer clearfix"

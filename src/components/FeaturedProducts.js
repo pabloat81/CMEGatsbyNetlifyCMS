@@ -1,17 +1,9 @@
 import React from 'react';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import { Link } from 'gatsby';
+import {elipsis} from './utils'
 
 const FeaturedProducts = ({ productosDestacados }) => {
-	const elipsis = (str) => {
-		let cantCaracteres = 22;
-		if (str && str.length > 0) {
-			str = str.toUpperCase();
-			if (str.length > cantCaracteres) return str.substring(0, cantCaracteres) + '...';
-			return str;
-		}
-		return 'PRODUCTO';
-	};
 
 	return (
 		<div className="row-services">
@@ -25,7 +17,7 @@ const FeaturedProducts = ({ productosDestacados }) => {
 							data-smobile="60"
 						/>
 						<div className="themesflat-headings style-1 text-center clearfix">
-							<h2 className="heading">{productosDestacados.heading}}</h2>
+							<h2 className="heading">{productosDestacados.heading.toUpperCase()}</h2>
 							<div className="sep has-icon width-125 clearfix">
 								<div className="sep-icon">
 									<span className="sep-icon-before sep-center sep-solid" />
@@ -53,7 +45,7 @@ const FeaturedProducts = ({ productosDestacados }) => {
 						>
 							<div className="owl-carousel owl-theme">
 								{productosDestacados.blurbs.map((blurb) => (
-									<div className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
+									<div key={blurb.text} className="themesflat-image-box style-1 has-icon icon-right w65 clearfix">
 										<div className="image-box-item">
 											<div className="inner">
 												<div className="thumb data-effect-item">

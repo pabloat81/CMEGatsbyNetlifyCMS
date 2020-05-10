@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 const Ventajas = ({ventajas}) => {
 	const v = {tituloVentaja: 'EJEMPLO', 
 				subTituloVentaja: 'We develop and understand project expectations and then manage those needs with a design team. Innovation should happen throughout a project.', 
-				Icono: '-pencil'}
+				Icono: 'fa-pencil'}
 
 	const ventajaItem = (i) => {
 		if(ventajas.iconosVentajas[i])
@@ -51,7 +51,7 @@ const Ventajas = ({ventajas}) => {
 					<div className="col span_1_of_4">
 						<div className="themesflat-icon-box icon-left accent-color style-2 clearfix">
 							<div className="icon-wrap">
-								<i className={`fa fa${ventajaItem(0).Icono}`} />
+								<i className={`fa ${ventajaItem(0).Icono}`} />
 							</div>
 							<div className="text-wrap">
 								<h5 className="heading">
@@ -70,7 +70,7 @@ const Ventajas = ({ventajas}) => {
 						/>
 						<div className="themesflat-icon-box icon-left accent-color style-2 clearfix">
 							<div className="icon-wrap font-size-35 line-height-50">
-								<i className={`fa fa${ventajaItem(1).Icono}`} />
+								<i className={`fa ${ventajaItem(1).Icono}`} />
 							</div>
 							<div className="text-wrap">
 								<h5 className="heading">
@@ -92,7 +92,7 @@ const Ventajas = ({ventajas}) => {
 						/>
 						<div className="themesflat-icon-box icon-left accent-color style-2 clearfix">
 							<div className="icon-wrap">
-								<i className={`fa fa${ventajaItem(2).Icono}`} />
+								<i className={`fa ${ventajaItem(2).Icono}`} />
 							</div>
 							<div className="text-wrap">
 								<h5 className="heading">
@@ -111,7 +111,7 @@ const Ventajas = ({ventajas}) => {
 						/>
 						<div className="themesflat-icon-box icon-left accent-color style-2 clearfix">
 							<div className="icon-wrap ">
-								<i className={`fa fa${ventajaItem(3).Icono}`} />
+								<i className={`fa ${ventajaItem(3).Icono}`} />
 							</div>
 							<div className="text-wrap">
 								<h5 className="heading">
@@ -133,7 +133,7 @@ const Ventajas = ({ventajas}) => {
 						/>
 						<div className="themesflat-icon-box icon-left accent-color style-2 clearfix">
 							<div className="icon-wrap">
-								<i className={`fa fa${ventajaItem(4).Icono}`} />
+								<i className={`fa ${ventajaItem(4).Icono}`} />
 							</div>
 							<div className="text-wrap">
 								<h5 className="heading">
@@ -153,7 +153,7 @@ const Ventajas = ({ventajas}) => {
 						/>
 						<div className="themesflat-icon-box icon-left accent-color style-2 clearfix">
 							<div className="icon-wrap font-size-35 line-height-50">
-								<i className={`fa fa${ventajaItem(5).Icono}`} />
+								<i className={`fa ${ventajaItem(5).Icono}`} />
 							</div>
 							<div className="text-wrap">
 								<h5 className="heading">

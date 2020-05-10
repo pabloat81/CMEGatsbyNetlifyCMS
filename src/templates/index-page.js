@@ -23,7 +23,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch
 		<FeaturedProducts productosDestacados={productosDestacados} />
 		<AboutBox />
 		<FeaturedProjects projects={obrasDestacadas} />
-	<h1>{ventajas.titulo}</h1>
+
 		<div
 			className="full-width-image margin-top-0"
 			style={{

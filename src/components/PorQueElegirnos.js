@@ -45,7 +45,7 @@ const PorQueElegirnos = ({ porQueElegirnos }) => {
 							>
 								<div className="themesflat-icon-box icon-top align-center has-width w95 circle light-bg accent-color style-1 clearfix">
 									<div className="icon-wrap">
-										<i className={`fa fa${icono.icono}`} />
+										<i className={`fa ${icono.icono}`} />
 									</div>
 									<div className="text-wrap">
 										<h5 className="heading">
