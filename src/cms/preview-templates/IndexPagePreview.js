@@ -19,6 +19,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         porQueElegirnos={data.PorQueElegirnos || { iconos: [] }}
         productosDestacados={data.productosDestacados}
         obrasDestacadas={data.obrasDestacadas}
+        aboutBox={data.aboutBox}
       />
     )
   } else {
