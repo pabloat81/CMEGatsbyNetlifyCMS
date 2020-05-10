@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../static/assets/css/animate.css';
@@ -13,12 +12,53 @@ import '../../static/assets/css/font-etline.css';
 import '../../static/assets/css/autora-icons.css';
 import '../../static/assets/css/shortcodes.css';
 import './style.css';
+import $ from 'jquery';
 
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 
+import {
+	flatSpacer,
+	flatContentBox,
+	flatEqualizeHeight,
+	flatGallery,
+	searchIcon,
+	flatTabs,
+	flatAccordions,
+	flatProgressBar,
+	//googleMap,
+	flatCounter,
+	flatIsotope,
+	swClick,
+	flatOwl,
+	Parallax,
+	inViewport
+} from './utils/flatThemeUtils';
+
 const TemplateWrapper = ({ children }) => {
 	const { title, description } = useSiteMetadata();
+
+	useEffect(() => {
+		//jQuery('.owl-carousel').owlCarousel({margin: 30})
+		flatSpacer();
+		flatContentBox();
+		flatEqualizeHeight();
+		flatGallery();
+		searchIcon();
+		flatTabs();
+		flatAccordions();
+		flatProgressBar();
+		//googleMap();
+		flatCounter();
+		flatIsotope();
+		swClick();
+		flatOwl();
+		Parallax();
+		inViewport();
+
+		console.log('pase')
+	}, []);
+
 	return (
 		<Fragment>
 			<Helmet>

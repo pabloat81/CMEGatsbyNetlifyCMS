@@ -1,7 +1,7 @@
 import React from 'react';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import { Link } from 'gatsby';
-import {elipsis} from './utils'
+import {elipsis} from './utils/utils'
 
 const FeaturedProducts = ({ productosDestacados }) => {
 

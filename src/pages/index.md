@@ -74,6 +74,16 @@ productosDestacados:
     - image: /img/meeting-space.png
       text: Drenajes
       url: /producto/rejillas
+aboutBox:
+  heading: Bienvenidos a CME
+  description: >
+    WWe have successfully completed projects in numerous states across the continental United States. Autora Construction Services has a proven track record of:
+  url: /
+  blurbs:
+    - text: Completing projects on time & Following budget guidelines
+    - text: Elevated quality of workmanship
+    - text: Meeting diverse supplier requirements
+    - text: Implementing appropriate safety precautions and procedures
 ventajas:
   titulo: VENTAJAS
   subtitulo: |-

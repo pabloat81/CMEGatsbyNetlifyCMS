@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
-import {elipsis} from './utils'
+import {elipsis} from './utils/utils'
 
 const FeaturedProjects = ({ projects }) => {
 	return (
