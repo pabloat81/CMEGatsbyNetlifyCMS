@@ -21,7 +21,7 @@ const FeaturedProjects = ({ projects }) => {
 								<div className="sep-icon">
 									<span className="sep-icon-before sep-center sep-solid" />
 									<span className="icon-wrap">
-										<i className="autora-icon-build" />
+										<i className="fa fa-wrench"></i>
 									</span>
 									<span className="sep-icon-after sep-center sep-solid" />
 								</div>

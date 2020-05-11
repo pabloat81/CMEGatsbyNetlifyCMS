@@ -3,14 +3,6 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
-import 'bootstrap/dist/css/bootstrap.css';
-import '../../static/assets/css/animate.css';
-import '../../static/assets/css/owl.carousel.css';
-import '../../static/assets/css/font-awesome.css';
-import '../../static/assets/css/ionicons.css';
-import '../../static/assets/css/font-etline.css';
-import '../../static/assets/css/autora-icons.css';
-import '../../static/assets/css/shortcodes.css';
 import './style.css';
 
 import useSiteMetadata from './SiteMetadata';
@@ -55,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
 		Parallax();
 		inViewport();
 
-		console.log('pase')
+		console.log('pase');
 	}, []);
 
 	return (
@@ -91,7 +83,7 @@ const TemplateWrapper = ({ children }) => {
 						<div id="content-wrap">
 							<div id="site-content" className="site-content clearfix">
 								<div id="inner-content" className="inner-content-wrap">
-									{children}
+									<div className="page-content">{children}</div>
 								</div>
 							</div>
 						</div>

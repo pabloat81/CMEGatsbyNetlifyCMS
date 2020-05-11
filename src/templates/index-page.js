@@ -13,6 +13,8 @@ import FeaturedProjects from '../components/FeaturedProjects';
 
 //import Video from '../components/video';
 
+import videomp4 from '../../static/assets/video.mp4'
+
 export const IndexPageTemplate = ({
 	image,
 	title,
@@ -27,12 +29,15 @@ export const IndexPageTemplate = ({
 		{/*<Video 
 			videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ" 
 		videoTitle="Official Music Video on YouTube" />*/}
-
 		<Helmet titleTemplate="%s | Blog">
 			<title>{title}</title>
 			<meta name="description" content={metaDescripcion} />
 			<meta property="og:image" content={image} />
 		</Helmet>
+
+		<video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
+		    <source src={videomp4} type="video/mp4" />
+		</video>
 
 		<PorQueElegirnos porQueElegirnos={porQueElegirnos} />
 		<AboutBox data={aboutBox} />
