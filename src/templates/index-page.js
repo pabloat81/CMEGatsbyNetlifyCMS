@@ -11,8 +11,6 @@ import AboutBox from '../components/AboutBox';
 import FeaturedProducts from '../components/FeaturedProducts';
 import FeaturedProjects from '../components/FeaturedProjects';
 
-//import Video from '../components/video';
-
 import videomp4 from '../../static/assets/video.mp4'
 
 export const IndexPageTemplate = ({
@@ -26,9 +24,6 @@ export const IndexPageTemplate = ({
 	aboutBox
 }) => (
 	<Fragment>
-		{/*<Video 
-			videoSrcURL="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-		videoTitle="Official Music Video on YouTube" />*/}
 		<Helmet titleTemplate="%s | Blog">
 			<title>{title}</title>
 			<meta name="description" content={metaDescripcion} />

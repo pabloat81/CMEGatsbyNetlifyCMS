@@ -67,6 +67,7 @@ aboutBox:
   description: >
     WWe have successfully completed projects in numerous states across the continental United States. Autora Construction Services has a proven track record of:
   url: /
+  image: /img/coffee.png
   blurbs:
     - text: Completing projects on time & Following budget guidelines
     - text: Elevated quality of workmanship

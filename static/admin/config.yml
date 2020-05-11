@@ -117,6 +117,9 @@ collections:
               - label: Description
                 name: description
                 widget: text
+              - label: Image
+                name: image
+                widget: image
               - label: Blurbs
                 name: blurbs
                 widget: list
