@@ -160,6 +160,13 @@ export const pageQuery = graphql`
 					heading
 					description
 					url
+					image {
+						childImageSharp {
+							fluid(maxWidth: 600, quality: 90) {
+								...GatsbyImageSharpFluid
+							}
+						}
+					}
 					blurbs {
 						text
 					}
