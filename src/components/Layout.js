@@ -2,6 +2,8 @@ import React, { Fragment, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import FeaturedTitle from './FeaturedTitle'
+import PropTypes from 'prop-types';
 
 import './style.css';
 
@@ -26,7 +28,12 @@ import {
 	inViewport
 } from './utils/flatThemeUtils';
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, sidebar, addPaddingTop, classContentWrap, featuredTitleObj }) => {
+	const sidebarType = () => {
+		if(!sidebar) return 'no-sidebar'
+		return sidebar
+	}
+
 	const { title, description } = useSiteMetadata();
 
 	useEffect(() => {
@@ -75,17 +82,14 @@ const TemplateWrapper = ({ children }) => {
 				<meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
 			</Helmet>
 
-			<div id="wrapper" className="header-fixed page no-sidebar header-style-2 topbar-style-2 animsition">
+			<div id="wrapper" className={`header-fixed page ${sidebarType()} header-style-2 topbar-style-1 animsition`}>
 				<div id="page" className="clearfix">
 					<Navbar />
 
-					<div id="main-content" className="site-main clearfix">
-						<div id="content-wrap">
-							<div id="site-content" className="site-content clearfix">
-								<div id="inner-content" className="inner-content-wrap">
-									<div className="page-content">{children}</div>
-								</div>
-							</div>
+					<FeaturedTitle featuredTitleObj={featuredTitleObj}/>
+					<div id="main-content" className="site-main clearfix" style={addPaddingTop ? {padding: '81px 0px'} : {}}>
+						<div id="content-wrap" className={classContentWrap}>
+							{children}
 						</div>
 					</div>
 
@@ -95,6 +99,13 @@ const TemplateWrapper = ({ children }) => {
 			<a id="scroll-top" />
 		</Fragment>
 	);
+};
+
+TemplateWrapper.propTypes = {
+	sidebar: PropTypes.string, //classname
+	addPaddingTop: PropTypes.bool, 
+	classContentWrap: PropTypes.string, //classname
+	featuredTitleObj: PropTypes.object // {title: '', section: ''}
 };
 
 export default TemplateWrapper;

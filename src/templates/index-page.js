@@ -11,7 +11,7 @@ import AboutBox from '../components/AboutBox';
 import FeaturedProducts from '../components/FeaturedProducts';
 import FeaturedProjects from '../components/FeaturedProjects';
 
-import videomp4 from '../../static/assets/video.mp4'
+import videomp4 from '../../static/assets/video.mp4';
 
 export const IndexPageTemplate = ({
 	image,
@@ -26,21 +26,25 @@ export const IndexPageTemplate = ({
 	<Fragment>
 		<Helmet titleTemplate="%s | Blog">
 			<title>{title}</title>
-			<meta name="description" content={metaDescripcion} />
-			<meta property="og:image" content={image} />
+			<meta name="description" content={metaDescripcion} data-react-helmet="true" />
+			<meta property="og:image" content={image.publicURL} />
 		</Helmet>
+		<div id="site-content" className="site-content clearfix">
+			<div id="inner-content" className="inner-content-wrap" >
+				<div className="page-content">
+					<video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
+						<source src={videomp4} type="video/mp4" />
+					</video>
+					<PorQueElegirnos porQueElegirnos={porQueElegirnos} />
+					<AboutBox data={aboutBox} />
 
-		<video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
-		    <source src={videomp4} type="video/mp4" />
-		</video>
+					<FeaturedProducts productosDestacados={productosDestacados} />
+					<Ventajas ventajas={ventajas} />
 
-		<PorQueElegirnos porQueElegirnos={porQueElegirnos} />
-		<AboutBox data={aboutBox} />
-
-		<FeaturedProducts productosDestacados={productosDestacados} />
-		<Ventajas ventajas={ventajas} />
-
-		<FeaturedProjects projects={obrasDestacadas} />
+					<FeaturedProjects projects={obrasDestacadas} />
+				</div>
+			</div>
+		</div>
 	</Fragment>
 );
 
@@ -74,7 +78,7 @@ const IndexPage = ({ data }) => {
 			<IndexPageTemplate
 				image={frontmatter.image}
 				title={frontmatter.title}
-				metaDescripcion={frontmatter.heading}
+				metaDescripcion={frontmatter.metaDescripcion}
 				ventajas={frontmatter.ventajas}
 				porQueElegirnos={frontmatter.PorQueElegirnos}
 				productosDestacados={frontmatter.productosDestacados}
@@ -101,6 +105,7 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				image {
+					publicURL
 					childImageSharp {
 						fluid(maxWidth: 2048, quality: 100) {
 							...GatsbyImageSharpFluid
