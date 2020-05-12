@@ -1,6 +1,8 @@
 ---
 templateKey: product-template
 title: Rejillas
+imagenPrincipal: /img/products-grid2.jpg
+orden: 1
 imagenes:
   - alt: test
     imagen: /img/blog-index.jpg
