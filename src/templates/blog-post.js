@@ -56,7 +56,7 @@ const BlogPost = ({ data }) => {
 			sidebar="sidebar-right"
 			addPaddingTop={true}
 			classContentWrap="container"
-			featuredTitleObj={{ title: post.frontmatter.title, section: 'Blog' }}
+			featuredTitleObj={{ title: post.frontmatter.title.toUpperCase(), section: 'Blog' }}
 		>
 			<div id="site-content" className="site-content clearfix">
 				<div id="inner-content" className="inner-content-wrap">

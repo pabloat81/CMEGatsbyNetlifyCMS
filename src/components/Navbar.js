@@ -7,25 +7,24 @@ import logoSmall from '../../static/assets/img/logo-small.png';
 const Navbar = () => {
 	const onClick = (e) => {
 		e.preventDefault();
-  };
-  
-  const [isSticky, setSticky] = useState(false);
-  const ref = useRef(null);
+	};
 
-  const handleScroll = () => {
-    if (ref.current) {
-      setSticky(window.pageYOffset > ref.current.getBoundingClientRect().top);
-    }
-  };
+	const [ isSticky, setSticky ] = useState(false);
+	const ref = useRef(null);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+	const handleScroll = () => {
+		if (ref.current) {
+			setSticky(window.pageYOffset > ref.current.getBoundingClientRect().top);
+		}
+	};
 
-    return () => {
-      window.removeEventListener('scroll', () => handleScroll);
-    };
-  }, []);
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
 
+		return () => {
+			window.removeEventListener('scroll', () => handleScroll);
+		};
+	}, []);
 
 	return (
 		<div id="site-header-wrap">
@@ -78,7 +77,13 @@ const Navbar = () => {
 						<div id="site-logo" className="clearfix">
 							<div id="site-log-inner">
 								<a href="/" rel="home" className="main-logo">
-									<img src={logo} alt="CME Argentina" width="140" data-retina={logoSmall} data-width="60" />
+									<img
+										src={logo}
+										alt="CME Argentina"
+										width="140"
+										data-retina={logoSmall}
+										data-width="60"
+									/>
 								</a>
 							</div>
 						</div>
@@ -90,14 +95,14 @@ const Navbar = () => {
 						<nav id="main-nav" className="main-nav">
 							<ul id="menu-primary-menu" className="menu">
 								<li className="menu-item ">
-                  <Link to="/" activeClassName="current-menu-item">
-                    HOME
-                  </Link>
+									<Link to="/" activeClassName="current-menu-item">
+										HOME
+									</Link>
 								</li>
 								<li className="dropdown megamenu menu-item menu-item-has-children">
-									<a id="megamenu" onClick={onClick} role="button" tabIndex={0}>
+									<Link id="megamenu" to="/productos">
 										PRODUCTOS
-									</a>
+									</Link>
 									<MegaMenu />
 								</li>
 								<li className="menu-item">
@@ -124,13 +129,13 @@ const Navbar = () => {
 										</li>
 										<li className="menu-item">
 											<a href="/">QUE ES EL MATERIAL COMPUESTO</a>
-										</li>										
+										</li>
 									</ul>
 								</li>
 								<li className="menu-item">
-                  <Link to="/blog" activeClassName="current-menu-item">
-                    BLOG
-                  </Link>
+									<Link to="/blog" activeClassName="current-menu-item">
+										BLOG
+									</Link>
 								</li>
 								<li className="menu-item">
 									<a href="/">CONTACTO</a>

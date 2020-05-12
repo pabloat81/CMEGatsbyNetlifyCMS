@@ -50,7 +50,7 @@ collections:
       - label: Template Key
         name: templateKey
         widget: hidden
-        default: template-producto
+        default: product-template
       - label: Title
         name: title
         widget: string
@@ -58,6 +58,14 @@ collections:
         name: body
         required: true
         widget: markdown
+      - label: Imagen Principal
+        name: imagenPrincipal
+        required: true
+        widget: image
+      - label: Orden
+        name: orden
+        required: true
+        widget: number
       - label: Imagenes
         name: imagenes
         required: true

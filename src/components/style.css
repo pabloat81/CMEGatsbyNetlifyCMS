@@ -375,7 +375,7 @@ body.page #main-content { padding-top: 0; padding-bottom: 0; }
 .has-effect-icon.offset-v-19 .elm-link {  margin-top: -19px; }
 .has-effect-icon.offset-v-25 .elm-link {  margin-top: -25px; }
 
-.has-effect-icon.offset-h-49 .elm-link {  margin-left: -49px; }
+.has-effect-icon.offset-h-49 .elm-link {  margin-left: -19px; }
 .has-effect-icon.offset-h-46 .elm-link {  margin-left: -46px; }
 .has-effect-icon.offset-h-24 .elm-link {  margin-left: -24px; }
 
@@ -794,6 +794,13 @@ div .mega{
 .widget.widget_instagram .instagram_badge_image a { position: relative; display: block; }
 
 /* Widget list */
+@media only screen and (max-width: 991px) {
+.products_links{
+  display: none;
+}
+}
+
+
 .widget.widget_list { background-color: #414141; }
 .widget.widget_list .inner { padding: 18px 30px; }
 .widget.widget_list ul { margin: 0px; }

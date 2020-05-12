@@ -12,7 +12,7 @@ export default class BlogIndexPage extends React.Component {
 				sidebar="sidebar-right"
 				addPaddingTop={true}
 				classContentWrap="container"
-				featuredTitleObj={{ title: 'Blog', section: 'Blog' }}
+				featuredTitleObj={{ title: 'BLOG', section: 'Blog' }}
 			>
 				<div id="site-content" className="site-content clearfix">
 					<div id="inner-content" className="inner-content-wrap">

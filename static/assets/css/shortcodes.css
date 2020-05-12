@@ -279,7 +279,7 @@
 .has-arrows.arrow-center .owl-theme .owl-nav [class*='owl-'] { top: 50%; }
 .has-arrows.arrow-center.offset-v-24 .owl-theme .owl-nav [class*='owl-'] { margin-top: -24px; }
 .has-arrows.arrow-center.offset-v-60 .owl-theme .owl-nav [class*='owl-'] { margin-top: -60px; }
-.has-arrows.arrow-center.offset-v-82 .owl-theme .owl-nav [class*='owl-'] { margin-top: -82px; }
+.has-arrows.arrow-center.offset-v-82 .owl-theme .owl-nav [class*='owl-'] { margin-top: -15px; }
 .has-arrows.arrow-center.offset-v-111 .owl-theme .owl-nav [class*='owl-'] { margin-top: -111px; }
 
 .has-arrows.arrow-center.offset-h-21 .owl-theme .owl-nav [class*='owl-'] { left: -21px; }
@@ -292,8 +292,8 @@
 
 /* Arrows Style 1*/
 .owl-theme .owl-nav [class*="owl-"] { text-align: center; background-color: #ffc30c; color: #fff;  width: 40px; height: 40px; font-size: 0; display: inline-block; position: relative; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
-.owl-theme .owl-nav [class*="owl-"]:after { font-size: 20px; line-height: 40px; content: "\f3d2"; font-family: "Ionicons"; position: absolute; left: 0; top: 0; text-indent: 0; width: 100%; height: 100%; text-align: center; display: inline-block;}
-.owl-theme .owl-nav .owl-next:after { content: "\f3d3"; }
+.owl-theme .owl-nav [class*="owl-"]:after { font-size: 20px; line-height: 40px; content: "\f060"; font-family: "FontAwesome"; position: absolute; left: 0; top: 0; text-indent: 0; width: 100%; height: 100%; text-align: center; display: inline-block;}
+.owl-theme .owl-nav .owl-next:after { content: "\f061"; }
 .owl-theme .owl-nav [class*="owl-"]:hover { background-color: #3e3e3e; }
 .owl-theme .owl-nav [class*="owl-"].disabled:hover,
 .owl-theme .owl-nav [class*="owl-"].disabled { background-color: rgba(255,255,255,0.2); color: #fff; cursor: default; }
