@@ -41,6 +41,71 @@ collections:
       - label: Tags
         name: tags
         widget: list
+  - name: productos
+    label: Productos
+    folder: src/pages/productos
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: template-producto
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        required: true
+        widget: markdown
+      - label: Imagenes
+        name: imagenes
+        required: true
+        widget: list
+        fields:
+          - label: Alt
+            name: alt
+            required: true
+            widget: string
+          - label: Imagen
+            name: imagen
+            required: true
+            widget: image
+      - label: Descargas
+        name: descargas
+        required: true
+        widget: list
+        fields:
+          - label: Nombre Archivo
+            name: nombreArchivo
+            required: true
+            widget: string
+          - label: Archivo
+            name: archivo
+            required: true
+            widget: file
+      - label: Ventajas
+        name: ventajas
+        required: true
+        widget: object
+        fields:
+          - label: Titulo
+            name: titulo
+            required: true
+            widget: string
+          - label: Lista Ventajas
+            name: listaVentajas
+            required: true
+            widget: list
+            fields:
+              - label: Titulo
+                name: titulo
+                required: true
+                widget: string
+              - label: Descripcion
+                name: descripcion
+                required: true
+                widget: text 
   - name: pages
     label: Pages
     files:
