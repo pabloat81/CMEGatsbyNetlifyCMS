@@ -33,7 +33,7 @@ const ProductsSideLinks = () => {
 				<ul className="list-wrap">
 				{products &&
 					products.map(({ node: producto }) => (
-					<li className="list-item">
+					<li key={producto.id} className="list-item">
 						<Link to={producto.fields.slug}>
 							<span className="text">{producto.frontmatter.title}</span>
 						</Link>
