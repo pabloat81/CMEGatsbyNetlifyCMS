@@ -58,6 +58,9 @@ collections:
         name: body
         required: true
         widget: markdown
+      - label: Meta Description
+        name: metaDescription
+        widget: string
       - label: Imagen Principal
         name: imagenPrincipal
         required: true
@@ -114,6 +117,60 @@ collections:
                 name: descripcion
                 required: true
                 widget: text 
+  - name: estructuras
+    label: Estructuras
+    folder: src/pages/estructuras
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: estructura-template
+      - label: Title
+        name: title
+        widget: string
+      - label: Meta Description
+        name: metaDescription
+        widget: string
+      - label: Body
+        name: body
+        required: true
+        widget: markdown
+      - label: Imagen Principal
+        name: imagenPrincipal
+        required: true
+        widget: image
+      - label: Orden
+        name: orden
+        required: true
+        widget: number
+      - label: Imagenes
+        name: imagenes
+        required: true
+        widget: list
+        fields:
+          - label: Alt
+            name: alt
+            required: true
+            widget: string
+          - label: Imagen
+            name: imagen
+            required: true
+            widget: image
+      - label: Descargas
+        name: descargas
+        required: true
+        widget: list
+        fields:
+          - label: Nombre Archivo
+            name: nombreArchivo
+            required: true
+            widget: string
+          - label: Archivo
+            name: archivo
+            required: true
+            widget: file
   - name: pages
     label: Pages
     files:

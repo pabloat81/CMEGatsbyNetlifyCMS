@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { node } from 'prop-types';
 
 const DownloadsSideLinks = ( {descargasArrayObj} ) => {
 	return (
-		<div className="content-info info-brochures">
+		<div style={descargasArrayObj ? {}:{display:'none'}} className="content-info info-brochures">
 			<div className="themesflat-headings style-2 clearfix">
 				<h2 className="heading line-height-62">CATÁLOGO</h2>
 				<div className="sep has-width w60 accent-bg clearfix" />

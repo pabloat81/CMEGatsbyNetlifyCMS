@@ -4,13 +4,13 @@ import Layout from '../../components/Layout';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage';
 
-class ProductoIndexPage extends React.Component {
+class EstructurasIndexPage extends React.Component {
 	render() {
 		const { data } = this.props;
 		const { edges: productos } = data.allMarkdownRemark;
 
 		return (
-			<Layout featuredTitleObj={{ title: 'PRODUCTOS EN MATERIAL COMPUESTO DE FIBRA DE VIDRIO', section: 'Productos' }}>
+			<Layout featuredTitleObj={{ title: 'ESTRUCTURAS EN MATERIAL COMPUESTO DE FIBRA DE VIDRIO', section: 'Estructuras' }}>
 				<div id="site-content" className="site-content clearfix">
 					<div id="inner-content" className="inner-content-wrap">
 						<div className="page-content">
@@ -73,7 +73,7 @@ class ProductoIndexPage extends React.Component {
 	}
 }
 
-ProductoIndexPage.propTypes = {
+EstructurasIndexPage.propTypes = {
 	data: PropTypes.shape({
 		allMarkdownRemark: PropTypes.shape({
 			edges: PropTypes.array
@@ -84,10 +84,10 @@ ProductoIndexPage.propTypes = {
 export default () => (
 	<StaticQuery
 		query={graphql`
-			query ProductosPageTemplate {
+			query EstructurasPageTemplate {
 				allMarkdownRemark(
 					sort: { order: ASC, fields: [frontmatter___orden] }
-					filter: { frontmatter: { templateKey: { eq: "product-template" } } }
+					filter: { frontmatter: { templateKey: { eq: "estructura-template" } } }
 				) {
 					edges {
 						node {
@@ -111,6 +111,6 @@ export default () => (
 				}
 			}
 		`}
-		render={(data) => <ProductoIndexPage data={data} />}
+		render={(data) => <EstructurasIndexPage data={data} />}
 	/>
 );

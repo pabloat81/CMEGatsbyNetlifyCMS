@@ -106,7 +106,7 @@ const Navbar = () => {
 									<MegaMenu />
 								</li>
 								<li className="menu-item">
-									<a href="index.html">ESTRUCTURAS</a>
+									<Link to="/estructuras">ESTRUCTURAS</Link>
 								</li>
 								<li className="menu-item menu-item-has-children">
 									<a href="/">MERCADOS</a>

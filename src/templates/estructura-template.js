@@ -4,18 +4,16 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-import ProductsSideLinks from '../components/products/ProductsSideLinks';
+import EstructurasSideLinks from '../components/estructuras/EstructurasSideLinks';
 import DownloadsSideLinks from '../components/products/DownloadsSideLinks';
 import PhotoSlider from '../components/PhotoSlider';
-import ProsAndCons from '../components/products/ProsAndCons';
 
-export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet }) => {
+export const EstructuraTemplate = ({ content, contentComponent, frontmatter, helmet }) => {
 	const DescripcionContent = contentComponent || Content;
 
 	return (
 		<Fragment>
 			{helmet || ''}
-
 			<div id="site-content" className="site-content clearfix">
 				<div id="inner-content" className="inner-content-wrap">
 					<div className="page-content">
@@ -38,7 +36,7 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 													data-smobile="20"
 												/>
 
-												<ProductsSideLinks />
+												<EstructurasSideLinks />
 
 												<div
 													className="themesflat-spacer clearfix"
@@ -64,9 +62,7 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 													data-column3="1"
 													data-auto="false"
 												>
-													<div className="owl-carousel owl-theme">
-														<PhotoSlider imagesArrayObj={frontmatter.imagenes} />
-													</div>
+													<PhotoSlider imagesArrayObj={frontmatter.imagenes} />
 												</div>
 												<div
 													className="themesflat-spacer clearfix"
@@ -75,12 +71,10 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 													data-smobile="40"
 												/>
 												<div className="flat-content-wrap style-3 clearfix">
-													{/*<h1 className="title">{frontmatter.title}</h1>
-												<div className="sep has-width w60 accent-bg margin-top-18 clearfix" />*/}
+													<h1 className="title">{frontmatter.title}</h1>
+													<div className="sep has-width w60 accent-bg margin-top-18 clearfix" />
 													<DescripcionContent content={content} />
 												</div>
-
-												<ProsAndCons ventajasObj={frontmatter.ventajas}></ProsAndCons>
 											</div>
 										</div>
 										<div
@@ -89,7 +83,6 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 											data-mobile="60"
 											data-smobile="60"
 										/>
-
 									</div>
 								</div>
 							</div>
@@ -101,24 +94,24 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 	);
 };
 
-ProductTemplate.propTypes = {
+EstructuraTemplate.propTypes = {
 	content: PropTypes.node.isRequired,
 	contentComponent: PropTypes.func,
 	frontmatter: PropTypes.object,
 	helmet: PropTypes.object
 };
 
-const Product = ({ data }) => {
+const Estructura = ({ data }) => {
 	const { markdownRemark: post } = data;
 
 	return (
-		<Layout featuredTitleObj={{ title: post.frontmatter.title.toUpperCase(), section: 'Productos' }}>
-			<ProductTemplate
+		<Layout featuredTitleObj={{ title: post.frontmatter.title.toUpperCase(), section: 'Estructuras' }}>
+			<EstructuraTemplate
 				content={post.html}
 				contentComponent={HTMLContent}
 				frontmatter={post.frontmatter}
 				helmet={
-					<Helmet titleTemplate="%s | Productos">
+					<Helmet titleTemplate="%s | Estructuras">
 						<title>{`${post.frontmatter.title}`}</title>
 						<meta name="description" content={`${post.frontmatter.metaDescription}`} />
 					</Helmet>
@@ -128,16 +121,16 @@ const Product = ({ data }) => {
 	);
 };
 
-Product.propTypes = {
+Estructura.propTypes = {
 	data: PropTypes.shape({
 		markdownRemark: PropTypes.object
 	})
 };
 
-export default Product;
+export default Estructura;
 
 export const pageQuery = graphql`
-	query ProductosByID($id: String!) {
+	query EstructuraByID($id: String!) {
 		markdownRemark(id: { eq: $id }) {
 			id
 			html
@@ -146,20 +139,17 @@ export const pageQuery = graphql`
 				metaDescription
 				imagenes {
 					imagen {
-						id
+						childImageSharp {
+							fluid(maxWidth: 750, quality: 100) {
+								...GatsbyImageSharpFluid
+							}
+						}
 					}
 				}
 				descargas {
 					nombreArchivo
 					archivo {
 						publicURL
-					}
-				}
-				ventajas {
-					titulo
-					listaVentajas {
-						titulo
-						descripcion
 					}
 				}
 			}
