@@ -1,6 +1,10 @@
 ---
 templateKey: product-template
 title: Rejillas
+metaDescription: Estas rejillas plásticas son fabricados mediante la tecnología
+  de moldeo en**Material Compuesto reforzado con Fibra de Vidrio (PRFV)**.
+  Combinan una gran resistencia a la corrosión con una excelente resistencia
+  mecánica.
 imagenPrincipal: /img/products-grid2.jpg
 orden: 1
 imagenes:
