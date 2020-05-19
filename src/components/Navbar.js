@@ -112,14 +112,14 @@ const Navbar = () => {
 									<a href="/">MERCADOS</a>
 									<ul className="sub-menu">
 										<li className="menu-item">
-											<a href="/">ABOUT US</a>
+											<Link href="/about">ABOUT US</Link>
 										</li>
 									</ul>
 								</li>
 								<li className="menu-item menu-item-has-children">
-									<a onClick={onClick} role="button" tabIndex={0}>
-										EMPRESA{' '}
-									</a>
+									<Link to='/about'>
+										EMPRESA
+									</Link>
 									<ul className="sub-menu">
 										<li className="menu-item">
 											<a href="/">QUIENES SOMOS</a>
@@ -138,7 +138,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className="menu-item">
-									<a href="/">CONTACTO</a>
+									<Link to="/contact">CONTACTO</Link>
 								</li>
 							</ul>
 						</nav>
