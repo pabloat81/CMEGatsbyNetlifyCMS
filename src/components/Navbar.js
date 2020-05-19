@@ -109,7 +109,7 @@ const Navbar = () => {
 									<Link to="/estructuras">ESTRUCTURAS</Link>
 								</li>
 								<li className="menu-item menu-item-has-children">
-									<a href="/">MERCADOS</a>
+									<Link to="/mercados">MERCADOS</Link>
 									<ul className="sub-menu">
 										<li className="menu-item">
 											<Link href="/about">ABOUT US</Link>
