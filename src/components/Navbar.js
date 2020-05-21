@@ -3,11 +3,10 @@ import { Link } from 'gatsby';
 import MegaMenu from './MegaMenu';
 import logo from '../../static/assets/img/logo.png';
 import logoSmall from '../../static/assets/img/logo-small.png';
+import MercadosNavBarLinks from './mercados/MercadosNavBarLinks';
 
 const Navbar = () => {
-	const onClick = (e) => {
-		e.preventDefault();
-	};
+
 
 	const [ isSticky, setSticky ] = useState(false);
 	const ref = useRef(null);
@@ -110,11 +109,7 @@ const Navbar = () => {
 								</li>
 								<li className="menu-item menu-item-has-children">
 									<Link to="/mercados">MERCADOS</Link>
-									<ul className="sub-menu">
-										<li className="menu-item">
-											<Link href="/about">ABOUT US</Link>
-										</li>
-									</ul>
+									<MercadosNavBarLinks/>
 								</li>
 								<li className="menu-item menu-item-has-children">
 									<Link to='/about'>

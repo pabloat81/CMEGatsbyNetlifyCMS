@@ -18,19 +18,27 @@ export default class Index extends React.Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault()
     const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
+
+    try{
+      let response = await fetch('/.netlify/functions/sendmail', {
+                            method: 'POST',
+                            body: JSON.stringify(this.state)})
+
+      if(response.status != 200){
+        alert('Error al enviar el formulario')
+        console.log(response.body)
+      }
+      else
+        navigate(form.getAttribute('action'))
+    }
+    catch (error){
+      alert(error)
+    }
+
+    
   }
 
   render() {

@@ -12,7 +12,7 @@ intro:
   blurbs:
     - image: /img/coffee.png
       title: Quimico
-      Link: https://google.com
+      link: https://google.com
       text: >
         We sell green and roasted coffee beans that are sourced directly from
         independent farmers and farm cooperatives. We’re proud to offer a
