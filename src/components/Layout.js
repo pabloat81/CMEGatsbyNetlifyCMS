@@ -19,7 +19,7 @@ import {
 	flatTabs,
 	flatAccordions,
 	flatProgressBar,
-	//googleMap,
+	googleMap,
 	flatCounter,
 	flatIsotope,
 	swClick,
@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children, sidebar, addPaddingTop, classContentWrap, f
 		flatTabs();
 		flatAccordions();
 		flatProgressBar();
-		//googleMap();
+		googleMap();
 		flatCounter();
 		flatIsotope();
 		swClick();

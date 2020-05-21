@@ -284,19 +284,19 @@ export const flatProgressBar = function() {
 	}
 };
 
-/*
+
 export const googleMap = function() {
 	// gmap default
 	if ($().gmap3) {
-		var data = JSON.parse('[{"address":"Westwell Leacon, Ashford, Vương Quốc Anh","content":""}]');
+		var data = JSON.parse('[{"address":"Jose Hernandez 370","content":""}]');
 		$('.themesflat-map').gmap3({
 			map: {
 				options: {
-					zoom: 10,
-					center: [ 51.1946026, 0.8140602, 14.5 ],
+					zoom: 13,
+					center: [ '-34.4257838','-58.7229504','17z' ],
 					mapTypeId: 'Autora',
 					mapTypeControlOptions: {
-						mapTypeIds: [ 'Autora', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID ]
+						mapTypeIds: [ 'Autora', window.google.maps.MapTypeId.SATELLITE, window.google.maps.MapTypeId.HYBRID ]
 					},
 					scrollwheel: true
 				}
@@ -450,7 +450,7 @@ export const googleMap = function() {
 		});
 	});
 };
-*/
+
 
 export const flatCounter = function() {
 	if ($().countTo) {
