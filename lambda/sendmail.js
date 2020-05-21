@@ -2,12 +2,9 @@ const sgMail = require('@sendgrid/mail')
 
 
 let { SENDGRID_API_KEY, SENDGRID_TO_EMAIL } = process.env
-/*
-let SENDGRID_API_KEY = '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'
-let SENDGRID_TO_EMAIL = 'pablo.tierno@cmeargentina.com'
-*/
+
 if(!SENDGRID_TO_EMAIL)
-    SENDGRID_TO_EMAIL = 'pablo.tierno@cmeargentina.com'
+    SENDGRID_TO_EMAIL = 'ventas@cmeargentina.com'
 
 exports.handler =  async (event, context, callback) => {
 
