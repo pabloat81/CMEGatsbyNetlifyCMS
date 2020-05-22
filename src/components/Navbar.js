@@ -75,15 +75,15 @@ const Navbar = () => {
 					<div className="wrap-inner clearfix">
 						<div id="site-logo" className="clearfix">
 							<div id="site-log-inner">
-								<a href="/" rel="home" className="main-logo">
+								<Link to="/" className="main-logo">
 									<img
 										src={logo}
 										alt="CME Argentina"
-										width="140"
+										width="130"
 										data-retina={logoSmall}
 										data-width="60"
 									/>
-								</a>
+								</Link>
 							</div>
 						</div>
 
@@ -117,7 +117,7 @@ const Navbar = () => {
 									</Link>
 									<ul className="sub-menu">
 										<li className="menu-item">
-											<a href="/">QUIENES SOMOS</a>
+											<Link to="/about">QUIENES SOMOS</Link>
 										</li>
 										<li className="menu-item">
 											<a href="/">FAQs</a>

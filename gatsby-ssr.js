@@ -39,6 +39,6 @@ exports.onRenderBody = ({ setBodyAttributes, setPostBodyComponents}) => {
     <script src={"/assets/js/gmap3.min.js"} type="text/javascript"></script>,
     <script src={"https://maps.googleapis.com/maps/api/js?key=AIzaSyAIEU6OT3xqCksCetQeNLIPps6-AYrhq-s&amp;region=GB"} type="text/javascript"></script>,
     //<script src={"/assets/js/shortcodes.js"} type="text/javascript"></script>,
-    <script src={"/assets/js/main.js"} type="text/javascript"></script>
+    //<script src={"/assets/js/main.js"} type="text/javascript"></script>
   ]);
 };

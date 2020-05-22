@@ -1,7 +1,7 @@
 import React from 'react';
-//import { Link } from 'gatsby'
+import { Link } from 'gatsby';
 
-const PorQueElegirnos = ({ porQueElegirnos }) => {
+const PorQueElegirnos = ({ porQueElegirnos, mostrarLinkAbout }) => {
 	return (
 		<div className="row-iconbox">
 			<div className="container">
@@ -68,10 +68,10 @@ const PorQueElegirnos = ({ porQueElegirnos }) => {
 							data-mobile="35"
 							data-smobile="35"
 						/>
-						<div className="elm-button text-center">
-							<a href="#" className="themesflat-button bg-accent">
-								ABOUT US
-							</a>
+						<div className="elm-button text-center" style={mostrarLinkAbout ? {display:'block'}: {display:'none'}}>
+							<Link to="/about" className="themesflat-button bg-accent">
+								NOSOTROS
+							</Link>
 						</div>
 						<div
 							className="themesflat-spacer clearfix"

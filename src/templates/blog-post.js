@@ -21,8 +21,8 @@ export const BlogPostTemplate = ({ content, contentComponent, description, tags,
 						<PostContent content={content} />
 						{tags && tags.length ? (
 							<div style={{ marginTop: `4rem` }}>
-								<div class="post-tags-socials clearfix">
-									<div class="post-tags ">
+								<div className="post-tags-socials clearfix">
+									<div className="post-tags ">
 										<span>Tags :</span>
 										{tags.map((tag) => (
 											<Link key={tag + `tag`} to={`/tags/${kebabCase(tag)}/`}>

@@ -63,7 +63,7 @@ export default class Index extends React.Component {
 													</div>
 												</div>
 												<p className="sub-heading font-weight-400 max-width-770 line-height-26 margin-top-14">
-                          Por favor envíenos sus requerimientos u otros comentarios.
+													Por favor envíenos sus requerimientos u otros comentarios.
 												</p>
 											</div>
 											<div
@@ -83,13 +83,15 @@ export default class Index extends React.Component {
 												</div>
 												<div className="text-wrap">
 													<h5 className="heading">
-														<a href="#">
-                            Celulares durante la cuarentena: <br/>
-                            (011) 1559587595 <br/>
-                            (011) 1558109488 <br/>
-                            (03327) 416051 / (0348) 4476189 / 4457077
-
-                            </a>
+														<a
+															href="https://wa.me/5491159587595?text=Te%20contacto%20desde%20la%20web%20de%20CME"
+															target="_blank"
+														>
+															Celulares durante la cuarentena: <br />
+															(011) 1559587595 <br />
+															(011) 1558109488 <br />
+															(03327) 416051 / (0348) 4476189 / 4457077
+														</a>
 													</h5>
 													<p className="sub-heading">Horario: de 8 a 17 hs</p>
 													<span className="class more-link">
@@ -111,14 +113,18 @@ export default class Index extends React.Component {
 												</div>
 												<div className="text-wrap">
 													<h5 className="heading">
-														<a href="#">José Hernandez 370
-                            <br/>
-                            Garín, Escobar (CP 1619)
-                            <br/>
-                            Buenos Aires, Argentina
-                            <br/>
-                            <br/>
-                            </a>
+														<a
+															href="https://www.google.com.ar/maps/place/CME+Argentina+S.A./@-34.4257838,-58.7229504,17z/data=!3m1!4b1!4m5!3m4!1s0x95bca1ee40c74fc5:0xd818b403907aeec1!8m2!3d-34.4257838!4d-58.7207617"
+															target="_blank"
+														>
+															José Hernandez 370
+															<br />
+															Garín, Escobar (CP 1619)
+															<br />
+															Buenos Aires, Argentina
+															<br />
+															<br />
+														</a>
 													</h5>
 													<p className="sub-heading">Lunes a viernes: 8 a 17 hs</p>
 													<span className="class more-link">Sábados y Domingo: Cerrado</span>
@@ -138,9 +144,13 @@ export default class Index extends React.Component {
 												</div>
 												<div className="text-wrap">
 													<h5 className="heading">
-														<a href="#">VENTAS@CMEARGENTINA.COM
-                            <br/><br/><br/><br/>
-                            </a>
+														<a href="mailto:ventas@cmeargentina.com">
+															VENTAS@CMEARGENTINA.COM
+															<br />
+															<br />
+															<br />
+															<br />
+														</a>
 													</h5>
 													<p className="sub-heading">Escríbanos sus comentarios</p>
 													<span className="class more-link">
@@ -268,7 +278,6 @@ export default class Index extends React.Component {
 						</div>
 					</div>
 				</div>
-
 			</Layout>
 		);
 	}

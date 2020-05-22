@@ -25,7 +25,11 @@ import {
 	swClick,
 	flatOwl,
 	Parallax,
-	inViewport
+	inViewport,
+	mobileMenuEvents,
+	mobileNav,
+	scrollToTop,
+	retinaLogo
 } from './utils/flatThemeUtils';
 
 const TemplateWrapper = ({ children, sidebar, addPaddingTop, classContentWrap, featuredTitleObj }) => {
@@ -38,6 +42,8 @@ const TemplateWrapper = ({ children, sidebar, addPaddingTop, classContentWrap, f
 
 	useEffect(() => {
 		//jQuery('.owl-carousel').owlCarousel({margin: 30})
+		mobileNav();
+		mobileMenuEvents();
 		flatSpacer();
 		flatContentBox();
 		flatEqualizeHeight();
@@ -53,8 +59,8 @@ const TemplateWrapper = ({ children, sidebar, addPaddingTop, classContentWrap, f
 		flatOwl();
 		Parallax();
 		inViewport();
-
-		console.log('pase');
+		scrollToTop();
+		retinaLogo();
 	}, []);
 
 	return (

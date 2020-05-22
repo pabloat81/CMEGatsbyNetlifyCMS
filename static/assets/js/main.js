@@ -45,11 +45,11 @@
 
                 
                 // Mobile Navigation
-                self.mobileNav();
+                //self.mobileNav();
 
                 
                 // Scroll to Top
-                self.scrollToTop();
+                //self.scrollToTop();
 
             } );
 

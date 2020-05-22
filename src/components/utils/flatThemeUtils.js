@@ -15,9 +15,106 @@
   * swClick
   * Parallax
 */
-
 const windowGlobal = typeof window !== 'undefined' && window;
 let $ = windowGlobal.jQuery
+let doc = windowGlobal.document
+
+export const retinaLogo = function() {
+	var retina = false; //windowGlobal.devicePixelRatio > 1 ? true : false;
+
+	if ( matchMedia( 'only screen and (max-width: 763px)' ).matches )
+		retina = true;
+
+	var $logo = $('#site-logo img');
+	var $logo_retina = $logo.data('retina');
+
+	if ( retina && $logo_retina ) {
+		$logo.attr({
+			src: $logo.data('retina'),
+			width: $logo.data('width'),
+			height: $logo.data('height')
+		});
+	}
+}
+
+export const scrollToTop = function() {         
+	$(document).off('click', '#scroll-top')   
+	$(document).on('click', '#scroll-top', function() {
+		$('html, body').animate({ scrollTop: 0 }, 1000 , 'easeInOutExpo');                
+	});
+	
+	$(windowGlobal).scroll(function() {
+		if ( $(this).scrollTop() > 300 ) {
+			$('#scroll-top').addClass('show');
+		} else {
+			$('#scroll-top').removeClass('show');
+		}
+	});
+}
+
+
+
+export const mobileNav = function() {
+	var menuType = 'desktop';
+	var mode = 'desktop';
+	var wrapMenu = $('#site-header-inner .wrap-inner');
+	var navExtw = $('.nav-extend.active');
+	var navExt = $('.nav-extend.active').children();
+
+	if ( matchMedia( 'only screen and (max-width: 991px)' ).matches )
+		mode = 'mobile';
+
+	if ( true ) {//mode != menuType ) {
+		menuType = mode;
+		console.log(menuType)
+		if ( mode === 'mobile' ) {
+			
+			$('#main-nav').attr('id', 'main-nav-mobi')
+				.appendTo('#site-header')
+				.hide().children('.menu').append(navExt)
+					.find('li:has(ul)')
+					.children('ul')
+						.removeAttr('style')
+						.hide()
+						.before('<span class="arrow"></span>');
+		} else {
+			if ( $('body').is('.header-style-3') )
+				wrapMenu = $('.site-navigation-wrap .inner');
+
+			$('#main-nav-mobi').attr('id', 'main-nav')
+				.removeAttr('style')
+				.prependTo(wrapMenu)
+				.find('.ext').appendTo(navExtw)
+				.parent().siblings('#main-nav')
+				.find('.sub-menu')
+					.removeAttr('style')
+				.prev().remove();
+					
+			$('.mobile-button').removeClass('active');
+		}
+	}
+
+	$(doc).off('click', '.mobile-button');
+	$(doc).on('click', '.mobile-button', function() {
+		$(this).toggleClass('active');
+		$('#main-nav-mobi').slideToggle();
+	})
+
+	$(doc).off('click', '#main-nav-mobi .arrow');
+	$(doc).on('click', '#main-nav-mobi .arrow', function() {
+		$(this).toggleClass('active').next().slideToggle();
+	})
+
+}
+
+export const mobileMenuEvents = function() {
+	
+	$(windowGlobal).on('resize', function() {
+		mobileNav();
+	});
+
+	
+}
 
 export const isMobile = {
 	Android: function() {
