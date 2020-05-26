@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Layout from '../../components/Layout';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../components/PreviewCompatibleImage';
+import { Helmet } from 'react-helmet';
 
 class ProductoIndexPage extends React.Component {
 	render() {
@@ -10,7 +11,13 @@ class ProductoIndexPage extends React.Component {
 		const { edges: productos } = data.allMarkdownRemark;
 
 		return (
-			<Layout featuredTitleObj={{ title: 'PRODUCTOS EN MATERIAL COMPUESTO DE FIBRA DE VIDRIO', section: 'Productos' }}>
+			<Layout
+				featuredTitleObj={{ title: 'PRODUCTOS EN MATERIAL COMPUESTO DE FIBRA DE VIDRIO', section: 'Productos' }}
+			>
+				<Helmet>
+					<title>Productos</title>
+				</Helmet>
+
 				<div id="site-content" className="site-content clearfix">
 					<div id="inner-content" className="inner-content-wrap">
 						<div className="page-content">
@@ -35,8 +42,10 @@ class ProductoIndexPage extends React.Component {
 																			<PreviewCompatibleImage
 																				imageInfo={{
 																					image:
-																						producto.frontmatter.imagenPrincipal,
-																					alt: `Imagen producto: ${producto.frontmatter.title}`
+																						producto.frontmatter
+																							.imagenPrincipal,
+																					alt: `Imagen producto: ${producto
+																						.frontmatter.title}`
 																				}}
 																			/>
 																		</div>

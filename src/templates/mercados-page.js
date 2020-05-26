@@ -4,18 +4,24 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import MercadosSideLinks from '../components/mercados/MercadosSideLinks';
-import _ from 'lodash'
+import _ from 'lodash';
+import {Helmet} from 'react-helmet';
 
 export const MercadosPageTemplate = ({ image, title, metaDescription, intro }) => (
 	<Fragment>
+		 <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={metaDescription} />
+      </Helmet>
+
 		<div id="site-content" className="site-content clearfix">
 			<div id="inner-content" className="inner-content-wrap">
 				<div className="themesflat-spacer clearfix" data-desktop="80" data-mobile="60" data-smobile="60" />
 
 				{intro.blurbs &&
-					_.orderBy(intro.blurbs, ['title'], ['asc']).map((blurb, index) => (
+					_.orderBy(intro.blurbs, [ 'title' ], [ 'asc' ]).map((blurb, index) => (
 						<Fragment key={index}>
-              <a id={blurb.title}></a>
+							<a id={blurb.title} />
 							<div
 								className="themesflat-carousel-box data-effect clearfix"
 								data-gap="0"
@@ -39,7 +45,8 @@ export const MercadosPageTemplate = ({ image, title, metaDescription, intro }) =
 														<span>Mercado:</span>
 														<h1 className="heading">{blurb.title}</h1>
 														{/*<span>Apply now!</span>*/}
-														<a href={blurb.link}
+														<a
+															href={blurb.link}
 															style={
 																blurb.link ? { display: 'block' } : { display: 'none' }
 															}
@@ -81,11 +88,7 @@ export const MercadosPageTemplate = ({ image, title, metaDescription, intro }) =
 		<div id="sidebar">
 			<div className="themesflat-spacer clearfix" data-desktop="80" data-mobile="0" data-smobile="0" />
 			<div id="inner-sidebar" className="inner-content-wrap">
-				<MercadosSideLinks blurbsArray={_.orderBy(intro.blurbs, ['title'], ['asc'])}/>
-
-				
-
-				
+				<MercadosSideLinks blurbsArray={_.orderBy(intro.blurbs, [ 'title' ], [ 'asc' ])} />
 			</div>
 			<div className="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="60" />
 		</div>

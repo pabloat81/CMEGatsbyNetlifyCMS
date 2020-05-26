@@ -361,9 +361,48 @@ collections:
           - label: Title
             name: title
             widget: string
+          - label: Meta Description
+            name: metaDescription
+            widget: string
           - label: Body
             name: body
             widget: markdown
+      - file: src/pages/FAQ/index.md
+        label: FAQ
+        name: faq
+        fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: faq-page
+          - label: Title
+            name: title
+            widget: string
+          - label: Meta Description
+            name: metaDescription
+            widget: string
+          - label: Preguntas Respuesta
+            name: faq
+            required: true
+            widget: object
+            fields:
+              - label: Titulo
+                name: titulo
+                required: true
+                widget: string
+              - label: Lista Preguntas y respuestas
+                name: listaFaqs
+                required: true
+                widget: list
+                fields:
+                  - label: Titulo
+                    name: titulo
+                    required: true
+                    widget: string
+                  - label: Descripcion
+                    name: descripcion
+                    required: true
+                    widget: text 
       - file: src/pages/mercados/index.md
         label: Pagina Mercados
         name: mercados

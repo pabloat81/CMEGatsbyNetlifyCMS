@@ -1,6 +1,7 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
 import Layout from '../../components/Layout';
+import { Helmet } from 'react-helmet';
 
 function encode(data) {
 	return Object.keys(data).map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&');
@@ -38,6 +39,10 @@ export default class Index extends React.Component {
 	render() {
 		return (
 			<Layout featuredTitleObj={{ title: 'CONTACTO', section: 'Contacto' }}>
+				<Helmet>
+					<title>Contacto</title>
+				</Helmet>
+
 				<div id="site-content" className="site-content clearfix">
 					<div id="inner-content" className="inner-content-wrap">
 						<div className="page-content">
@@ -177,6 +182,15 @@ export default class Index extends React.Component {
 							<div className="row-contact">
 								<div className="container">
 									<div className="row">
+										<div className="col-md-8">
+											<div
+												className="themesflat-spacer clearfix"
+												data-desktop="0"
+												data-mobile="0"
+												data-smobile="35"
+											/>
+											<div className="themesflat-map style-2" />
+										</div>
 										<div className="col-md-4">
 											<div className="themesflat-contact-form style-2 w100 clearfix">
 												<form
@@ -252,15 +266,6 @@ export default class Index extends React.Component {
 													</span>
 												</form>
 											</div>
-										</div>
-										<div className="col-md-8">
-											<div
-												className="themesflat-spacer clearfix"
-												data-desktop="0"
-												data-mobile="0"
-												data-smobile="35"
-											/>
-											<div className="themesflat-map style-2" />
 										</div>
 									</div>
 									<div className="row">
