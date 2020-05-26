@@ -120,7 +120,7 @@ const Navbar = () => {
 											<Link to="/about">QUIENES SOMOS</Link>
 										</li>
 										<li className="menu-item">
-											<Link to="/faq">FAQs</Link>
+											<Link to="/FAQ">FAQs</Link>
 										</li>
 										<li className="menu-item">
 											<a href="/">QUE ES EL MATERIAL COMPUESTO</a>

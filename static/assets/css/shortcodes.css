@@ -553,7 +553,7 @@
 .themesflat-accordions.has-icon.icon-left .accordion-item .accordion-heading > .inner { padding: 0px 0px 0px 34px; }
 .themesflat-accordions.has-icon.icon-left.iconstyle-2 .accordion-item .accordion-heading > .inner { padding: 0px 0px 0px 64px; }
 
-.themesflat-accordions.has-icon.iconstyle-1 .accordion-item .accordion-heading > .inner:before { content: "\e906"; font-family: "autoraicon" ; font-size: 20px; }
+.themesflat-accordions.has-icon.iconstyle-1 .accordion-item .accordion-heading > .inner:before { content: "\f14a"; font-family: "FontAwesome" ; font-size: 20px; }
 .themesflat-accordions.has-icon.iconstyle-2 .accordion-item .accordion-heading > .inner:before { content: "\f067"; font-family: "FontAwesome"; color: #999; font-size: 18px; width: 49px; height: 49px; text-align: center; line-height: 49px; background-color: transparent; border-right: 1px solid #f2f2f2; }
 
 .themesflat-accordions.has-icon.iconstyle-1 .accordion-item.active .accordion-heading > .inner:before { color: #ffc30c;  }

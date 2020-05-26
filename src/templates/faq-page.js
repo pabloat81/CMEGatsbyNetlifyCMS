@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import { Helmet } from 'react-helmet';
 
-export const FAQPageTemplate = ({ title, metaDescription }) => {
+export const FAQPageTemplate = ({ title, metaDescription, frontmatter }) => {
 	return (
 		<Fragment>
 			<Helmet>
@@ -14,10 +14,40 @@ export const FAQPageTemplate = ({ title, metaDescription }) => {
 			<div id="site-content" className="site-content clearfix">
 				<div id="inner-content" className="inner-content-wrap">
 					<div className="themesflat-spacer clearfix" data-desktop="61" data-mobile="60" data-smobile="60" />
-					<div className="themesflat-headings style-2 clearfix">
-						<h1 className="heading">{title.toUpperCase()}</h1>
-						<div className="sep has-width w80 accent-bg clearfix" />
-						<div className="sub-heading line-height-24 text-777 margin-top-28 margin-right-12">ssss</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div
+								class="themesflat-spacer clearfix"
+								data-desktop="0"
+								data-mobile="0"
+								data-smobile="35"
+							/>
+							<div class="themesflat-content-box" data-margin="0 0 0 18px" data-mobilemargin="0 0 0 0">
+								<div class="themesflat-headings style-1 clearfix">
+									<h2 class="heading">{title.toUpperCase()}</h2>
+									<div class="sep has-width w80 accent-bg margin-top-11 clearfix" />
+								</div>
+								<div
+									class="themesflat-spacer clearfix"
+									data-desktop="38"
+									data-mobile="35"
+									data-smobile="35"
+								/>
+								<div class="themesflat-accordions style-1 has-icon icon-left iconstyle-1 clearfix">
+									{frontmatter.faq &&
+										frontmatter.faq.listaFaqs.map((faq, index) => (
+											<div key={index} class={`accordion-item ${index === 0 ? 'active' : ''}`}>
+												<h3 class="accordion-heading">
+													<span class="inner">{faq.titulo}</span>
+												</h3>
+												<div class="accordion-content">
+													<div>{faq.descripcion}</div>
+												</div>
+											</div>
+									))}
+								</div>
+							</div>
+						</div>
 					</div>
 					<div className="themesflat-spacer clearfix" data-desktop="28" data-mobile="35" data-smobile="35" />
 				</div>
@@ -33,10 +63,10 @@ FAQPageTemplate.propTypes = {
 };
 
 const FAQPage = ({ data }) => {
-	const { about: post } = data;
+	const { markdownRemark: post } = data;
 	return (
 		<Layout classContentWrap="container" featuredTitleObj={{ title: 'QUIENES SOMOS', section: 'Quienes somos' }}>
-			<FAQPageTemplate title={post.frontmatter.title} />
+			<FAQPageTemplate title={post.frontmatter.title} frontmatter={post.frontmatter} />
 		</Layout>
 	);
 };
@@ -53,6 +83,13 @@ export const FAQPageQuery = graphql`
 			frontmatter {
 				title
 				metaDescription
+				faq {
+					titulo
+					listaFaqs {
+						titulo
+						descripcion
+					}
+				}
 			}
 		}
 	}
