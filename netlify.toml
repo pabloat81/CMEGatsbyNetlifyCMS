@@ -2,8 +2,6 @@
   publish = "public"
   command = "npm run build"
   functions = "lambda"
-[[plugins]]
-  package = "netlify-plugin-gatsby-cache"
 [build.environment]
   NODE_VERSION = "12"
   YARN_VERSION = "1.22.4"

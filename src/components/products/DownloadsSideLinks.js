@@ -14,7 +14,7 @@ const DownloadsSideLinks = ( {descargasArrayObj} ) => {
 			{descargasArrayObj &&
 					descargasArrayObj.map((descargaObj, index) => (
 			<div key={index} className="button-wrap has-icon icon-left size-14 pf21">
-				<a href={descargaObj.archivo !== null && descargaObj.archivo.publicURL} className="themesflat-button font-default bg-light-white w100">
+				<a href={descargaObj.archivo.publicURL} className="themesflat-button font-default bg-light-white w100">
 					<span>
 						{descargaObj.nombreArchivo}
 						<span className="icon">
