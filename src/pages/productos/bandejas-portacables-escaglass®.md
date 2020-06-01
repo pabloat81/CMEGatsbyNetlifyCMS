@@ -60,27 +60,21 @@ Son la opción ideal en Industrias Mineras, Petro/Químicas, Celulosas, Clorosod
 
 **Tramos Rectos**
 
-| Tipo | Altura     | Ancho (cm)        | Espacio entre travesaños (mm) | Longitud (m) |
-| ---- | ---------- | ----------------- | ----------------------------- | ------------ |
-| TR   | 75 100 150 | 15 30 45 60 75 90 | 150 225 300 450               | 3 6          |
-
-
+| Tipo | Altura               | Ancho (cm)                                 | Espacio entre travesaños (mm)  | Longitud (m) |
+| ---- | -------------------- | ------------------------------------------ | ------------------------------ | ------------ |
+| TR   | 75 <br/>100 <br/>150 | 15<br/> 30<br/> 45<br/> 60<br/> 75<br/> 90 | 150<br/> 225<br/> 300<br/> 450 | 3<br/> 6     |
 
 **Curvas Horizontales**
 
-| Tipo | Ángulo      | Altura     | Ancho (cm)        | Radio (mm)     |
-| ---- | ----------- | ---------- | ----------------- | -------------- |
-| CH   | 30 45 60 90 | 75 100 150 | 15 30 45 60 75 90 | r300 r600 r900 |
-
-
+| Tipo | Ángulo                     | Altura               | Ancho (cm)                                 | Radio (mm)               |
+| ---- | -------------------------- | -------------------- | ------------------------------------------ | ------------------------ |
+| CH   | 30<br/> 45<br/> 60<br/> 90 | 75<br/> 100<br/> 150 | 15 <br/>30<br/> 45<br/> 60<br/> 75<br/> 90 | r300<br/> r600 <br/>r900 |
 
 **Cuevas Verticales (interna, externa, articulada)**
 
-| Tipo        | Ángulo | Altura     | Ancho (cm)        | Radio (mm)     |
-| ----------- | ------ | ---------- | ----------------- | -------------- |
-| CVI CVE CVA | 45 90  | 75 100 150 | 15 30 45 60 75 90 | r300 r600 r900 |
-
-
+| Tipo                  | Ángulo     | Altura               | Ancho (cm)                                 | Radio (mm)               |
+| --------------------- | ---------- | -------------------- | ------------------------------------------ | ------------------------ |
+| CVI <br/>CVE<br/> CVA | 45<br/> 90 | 75<br/> 100<br/> 150 | 15<br/> 30 <br/>45<br/> 60<br/> 75 <br/>90 | r300<br/> r600 <br/>r900 |
 
 Para ver más medidas y codificaciones de bandejas portacables Tipo Escalerilla (uniones T y X, reducciones, tapas) y Tipo Cable Canal, descargue el catálogo Online.
 
