@@ -6,6 +6,8 @@ orden: 1
 imagenes:
   - imagen: /img/techo-circular-34-m-diam-prfv.jpg
     alt: Estructura de prfv techo circular
+  - imagen: /img/techo-circular-34-m-diam-prfv.jpg
+    alt: Estructura de prfv techo circular
 ---
 CME realizó con éxito la ingeniería, el desarrollo y la fabricación de dos techos circulares para cubrir los tanques de hormigón armado de una importante industria química, perteneciente al grupo de empresas químicas, pretroquímicas y agrícolas más grande del país, cuyo complejo productivo se encuentra ubicado en Bahía Blanca.\
 \

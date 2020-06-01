@@ -64,9 +64,7 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 													data-column3="1"
 													data-auto="false"
 												>
-													<div className="owl-carousel owl-theme">
-														<PhotoSlider imagesArrayObj={frontmatter.imagenes} />
-													</div>
+													<PhotoSlider imagesArrayObj={frontmatter.imagenes} />
 												</div>
 												<div
 													className="themesflat-spacer clearfix"
@@ -80,7 +78,7 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 													<DescripcionContent content={content} />
 												</div>
 
-												<ProsAndCons ventajasObj={frontmatter.ventajas}></ProsAndCons>
+												<ProsAndCons ventajasObj={frontmatter.ventajas} />
 											</div>
 										</div>
 										<div
@@ -89,7 +87,6 @@ export const ProductTemplate = ({ content, contentComponent, frontmatter, helmet
 											data-mobile="60"
 											data-smobile="60"
 										/>
-
 									</div>
 								</div>
 							</div>
@@ -145,8 +142,13 @@ export const pageQuery = graphql`
 				title
 				metaDescription
 				imagenes {
+					alt
 					imagen {
-						id
+						childImageSharp {
+							fluid(maxWidth: 800, quality: 90) {
+								...GatsbyImageSharpFluid
+							}
+						}
 					}
 				}
 				descargas {

@@ -138,6 +138,7 @@ export const pageQuery = graphql`
 				title
 				metaDescription
 				imagenes {
+					alt
 					imagen {
 						childImageSharp {
 							fluid(maxWidth: 750, quality: 100) {

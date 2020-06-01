@@ -161,7 +161,7 @@ export const Parallax = function() {
 };
 
 export const flatOwl = function() {
-	if ($('.owlCarousel')) {
+	if ($().owlCarousel) {
 		$('.themesflat-carousel-box').each(function() {
 			var $this = $(this),
 				auto = $this.data('auto'),
@@ -169,7 +169,7 @@ export const flatOwl = function() {
 				item2 = $this.data('column2'),
 				item3 = $this.data('column3'),
 				gap = Number($this.data('gap'));
-
+				
 			$this.find('.owl-carousel').owlCarousel({
 				margin: gap,
 				nav: true,
@@ -194,7 +194,7 @@ export const flatOwl = function() {
 };
 
 export const flatGallery = function() {
-	if ($('.owlCarousel')) {
+	if ($().owlCarousel) {
 		$('.themesflat-gallery').each(function() {
 			var sthis = $(this),
 				auto = sthis.data('auto'),

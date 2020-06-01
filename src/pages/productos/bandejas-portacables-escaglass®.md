@@ -40,6 +40,8 @@ ventajas:
     - titulo: Mantenimiento
       descripcion: Nulo, no requiere
 ---
+# **BANDEJAS PORTACABLES de PRFV**
+
 Las bandejas portacables Escaglass® son fabricadas en**Material Compuesto reforzado con Fibra de Vidrio**(también conocido como PRFV o plástico reforzado).
 
 Las bandejas pasacables combinan una **gran resistencia a la corrosión** con una **excelente resistencia mecánica**. Las mismas son formuladas en base a **resinas** del tipo poliéster isoftálica, vinilester o resinas especiales, y la elección de una u otra dependerá de las condiciones químicas a las que se encuentren expuestas.
